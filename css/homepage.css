@@ -1,0 +1,43 @@
+#hero {
+  padding-top: 100px;
+  background-color: var(--lightBgColor);
+}
+.hero-img-full-width {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hero-wrapper {
+  max-width: 892px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.hero-wrapper h1 {
+  max-width: 730px;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 1.1;
+}
+.hero-wrapper p {
+  margin: 15px 0 30px;
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    padding-top: 60px;
+  }
+  .hero-wrapper h1 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 767px) {
+  #hero {
+    padding-top: 40px;
+  }
+  .hero-wrapper h1 {
+    font-size: 36px;
+  }
+  .hero-wrapper p {
+    margin: 15px 0 20px;
+  }
+}
