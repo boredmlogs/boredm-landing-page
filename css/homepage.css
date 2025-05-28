@@ -17,11 +17,185 @@
   margin: 0 auto;
   font-size: 60px;
   line-height: 1.1;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 .hero-wrapper p {
   margin: 15px 0 30px;
 }
 
+#partnerships {
+  background: var(--lightBgColor);
+  padding: 84px 0 60px;
+}
+#partnerships h5 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#partnerships .container {
+  max-width: 1462px;
+}
+.slider-2 {
+  margin-top: 20px;
+}
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+.partnerships-wrapper {
+  overflow: hidden;
+}
+.slick-slide {
+  text-align: center;
+  margin: 0 40px;
+}
+
+#financial_solutions {
+  padding-bottom: 150px;
+}
+#financial_solutions .container {
+  max-width: 1440px;
+  padding: 0;
+}
+.financial-solutions-header p {
+  max-width: 530px;
+  margin: 20px auto 50px;
+}
+
+.financial-slider-wrapper {
+  position: relative;
+}
+/* .financial-slider-wrapper::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  width: 60px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.financial-slider-wrapper::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+  width: 60px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 9;
+} */
+.financial-solution-single {
+  padding: 30px;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 508px;
+  display: flex;
+  flex-direction: column;
+}
+.financial-solution-single h6 {
+  color: #fff;
+  display: inline-flex;
+  width: max-content;
+  padding: 6px 20px 5px;
+  border-radius: 50px;
+}
+.financial-solution-single p {
+  margin-top: auto;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.financial-solution-single h3 {
+  color: #fff;
+  font-size: 46px;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.view-more-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: var(--lightBgColor);
+  margin-top: 20px;
+  padding: 30px 20px;
+}
+.view-more-wrapper .separator {
+  background: #5d5d5d;
+  width: 1px;
+  height: 26px;
+}
+.view-more-wrapper a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primaryColor);
+}
+.view-more-wrapper a:hover {
+  color: var(--primaryColor);
+}
+.view-more-wrapper a img {
+  transition: all 0.2s ease;
+}
+.view-more-wrapper a:hover img {
+  transform: translateX(3px);
+}
+
+#about_us {
+  padding: 150px 0 100px;
+}
+.about-header h2 {
+  max-width: 891px;
+}
+.about-text {
+  padding-top: 80px;
+}
+.about-text a {
+  margin-top: 55px;
+}
+
+#how_it_works_section {
+  background: var(--lightBgColor);
+  padding: 150px 0;
+}
+.how-it-works-text h2 {
+  margin-bottom: 15px;
+}
+.how-it-works-img {
+  background: var(--primaryColor);
+  padding: 30px;
+  text-align: center;
+}
+.how-it-works-img img {
+  max-width: 260px;
+}
+.how-it-works-steps-wrapper {
+  max-width: 613px;
+  margin-top: 50px;
+}
+.how-it-works-steps-wrapper .accordion-item {
+  background: transparent;
+}
+.how-it-works-steps-wrapper .accordion-item:first-of-type {
+  border-top: 1px solid #d9d9d9;
+}
+.how-it-works-steps-wrapper .accordion-button::after {
+  background-image: url(../images/icons/chev-right.svg);
+}
+.how-it-works-steps-wrapper .accordion-button:not(.collapsed)::after {
+  background-image: url(../images/icons/faq-chev-down.svg) !important;
+  transform: rotate(0deg) !important;
+}
+@media (max-width: 1440px) {
+  .financial-slider-wrapper::before,
+  .financial-slider-wrapper::after {
+    display: none;
+  }
+  .partnerships-wrapper {
+    margin: 0 -20px;
+  }
+}
 @media (max-width: 1024px) {
   #hero {
     padding-top: 60px;
@@ -29,8 +203,29 @@
   .hero-wrapper h1 {
     font-size: 46px;
   }
+  #partnerships {
+    padding: 80px 0;
+  }
+  .financial-solution-single {
+    min-height: 400px;
+  }
+  .financial-solution-single h3 {
+    font-size: 36px;
+  }
+  #financial_solutions {
+    padding-bottom: 90px;
+  }
+  #about_us {
+    padding: 90px 0;
+  }
+  #how_it_works_section {
+    padding: 90px 0;
+  }
 }
 @media (max-width: 767px) {
+  .slider-2 {
+    margin-top: 10px;
+  }
   #hero {
     padding-top: 40px;
   }
@@ -39,5 +234,69 @@
   }
   .hero-wrapper p {
     margin: 15px 0 20px;
+  }
+  #partnerships {
+    padding: 45px 0;
+  }
+  #partnerships h5 {
+    margin-bottom: 20px;
+  }
+  .slick-slide {
+    text-align: center;
+    margin: 0 10px;
+  }
+  #financial_solutions {
+    padding-bottom: 50px;
+  }
+  .financial-solutions-header {
+    padding: 0 20px;
+  }
+  .financial-solutions-header p {
+    margin: 15px auto 30px;
+  }
+  .financial-solution-single {
+    padding: 20px;
+  }
+  .financial-solution-single h6 {
+    font-size: 14px;
+  }
+
+  .view-more-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+  .view-more-wrapper .separator {
+    width: 26px;
+    height: 1px;
+  }
+  #about_us {
+    padding: 50px 0 30px;
+  }
+  #about_us .row {
+    flex-direction: column-reverse;
+  }
+  .about-text {
+    padding-top: 10px;
+  }
+  .about-text a {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  #how_it_works_section {
+    padding: 50px 0;
+  }
+  .how-it-works-text h2 {
+    margin-bottom: 12px;
+  }
+  .how-it-works-steps-wrapper {
+    margin-top: 25px;
+  }
+  .how-it-works-img {
+    margin-top: 25px;
+  }
+  .how-it-works-img img {
+    max-width: 180px;
   }
 }

@@ -1,6 +1,6 @@
 /* faq */
 #faq {
-  padding: 90px 0;
+  padding: 150px 0 90px;
 }
 #faq .container {
   max-width: 848px;
@@ -9,9 +9,6 @@
 #faq h4,
 #faq h2 {
   text-align: center;
-}
-#faq h4 {
-  margin-bottom: 0px;
 }
 #faq h2 {
   margin-bottom: 40px;
@@ -51,7 +48,7 @@
 #cta {
   background: linear-gradient(
     to right,
-    var(--darkBlue) 50%,
+    var(--primaryColor) 50%,
     var(--lightBgColor) 50%
   );
   margin-top: 100px;
@@ -84,7 +81,6 @@
 .cta-wrapper-left__button--group a {
   border: 1px solid #ffffff;
   padding: 10px 20px;
-  border-radius: 10px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -92,6 +88,7 @@
 }
 .cta-wrapper-left__button--group a:hover {
   transform: translateY(-2px);
+  color: #fff;
 }
 .cta-wrapper-img {
   margin-left: -85px;
@@ -112,6 +109,118 @@
 .cta-wrapper-right__single--margin {
   margin-bottom: 60px;
 }
+
+/* features */
+#features {
+  padding: 150px 0;
+}
+.features-header p {
+  max-width: 708px;
+  margin: 20px auto 50px;
+}
+#features .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#features .col-12 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.features-col-single h5 {
+  margin: 20px 0 5px;
+}
+.explore-more-btn {
+  margin-top: 50px;
+}
+
+/* pricing */
+#pricing {
+  padding-top: 150px;
+}
+.pricing-header h2 {
+  max-width: 582px;
+  margin: 0 auto 50px;
+}
+.pricing-wrapper {
+  background: var(--lightBgColor);
+  padding: 40px;
+}
+.pricing-wrapper__left > p {
+  margin: 10px 0 30px;
+  max-width: 518px;
+}
+.pricing-info a {
+  margin-top: 30px;
+}
+.pricing-info p:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.pricing-wrapper-right ul {
+  padding-left: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 0;
+}
+.pricing-wrapper-right ul li {
+  padding-left: 36px;
+  position: relative;
+}
+.pricing-wrapper-right ul li::before {
+  content: "";
+  position: absolute;
+  background: url(../images/icons/checkmark-icon.svg);
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+  left: 5px;
+  top: 5px;
+}
+
+/* testimonials */
+.testimonials-wrapper {
+  max-width: 1440px;
+  margin: 50px auto 0;
+}
+.testimonials-arrows {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+.testimonials-arrows a {
+  background: #f1f1f1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials-arrows a:hover {
+  background: var(--primaryColor);
+}
+.testimonials-arrows a svg path {
+  transition: all 0.2s ease;
+}
+.testimonials-arrows a:hover svg path {
+  stroke: #fff;
+}
+.testimonials-info {
+  background: var(--lightBgColor);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.testimonials-info p:first-of-type {
+  margin-bottom: 15px;
+}
+.testimonials-info h6 {
+  margin-top: auto;
+  margin-bottom: 2px;
+}
+
 @media (max-width: 1200px) {
   .cta-wrapper-left__button--group {
     flex-direction: column;
@@ -123,6 +232,9 @@
 }
 
 @media (max-width: 1024px) {
+  #pricing {
+    padding-top: 90px;
+  }
   .cta-img-col {
     display: none;
   }
@@ -138,16 +250,25 @@
   #cta {
     margin-top: 50px;
   }
+  #features {
+    padding: 90px 0;
+  }
+  #faq {
+    padding-top: 90px;
+  }
 }
 
 @media (max-width: 767px) {
+  #pricing {
+    padding-top: 50px;
+  }
   #cta {
     background: var(--lightBgColor);
 
     margin-top: 30px;
   }
   .cta-wrapper-left {
-    background: var(--darkBlue);
+    background: var(--primaryColor);
     margin: 0 -20px;
     padding: 40px 20px;
   }
@@ -189,5 +310,47 @@
   }
   #faq h2 {
     margin-bottom: 10px;
+  }
+  #features {
+    padding: 50px 0;
+  }
+  .features-header p {
+    margin: 15px auto 30px;
+  }
+  #features .col-12:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .explore-more-btn {
+    margin-top: 30px;
+  }
+  .pricing-header h2 {
+    margin: 0 auto 30px;
+  }
+  .pricing-wrapper {
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+  .pricing-wrapper__left > p {
+    margin: 10px 0 20px;
+  }
+  .pricing-info a {
+    margin-top: 20px;
+  }
+  .pricing-wrapper-right {
+    padding-top: 20px;
+  }
+  .pricing-wrapper-right ul {
+    margin-top: 20px;
+    gap: 15px;
+  }
+  .pricing-wrapper-right ul li {
+    padding-left: 30px;
+  }
+  .testimonials-arrows {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  .testimonials-wrapper {
+    margin: 35px auto 0;
   }
 }
