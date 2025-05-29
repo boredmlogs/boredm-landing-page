@@ -270,7 +270,7 @@
   .cta-wrapper-left {
     background: var(--primaryColor);
     margin: 0 -20px;
-    padding: 40px 20px;
+    padding: 40px 20px 50px;
   }
   .cta-wrapper-right__single h3 {
     font-size: 36px;
@@ -352,5 +352,8 @@
   }
   .testimonials-wrapper {
     margin: 35px auto 0;
+  }
+  .testimonials-header h2 {
+    max-width: 320px;
   }
 }

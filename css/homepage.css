@@ -223,8 +223,11 @@
   }
 }
 @media (max-width: 767px) {
+  .slick-slide img {
+    aspect-ratio: 16 / 9;
+  }
   .slider-2 {
-    margin-top: 10px;
+    margin-top: 0px;
   }
   #hero {
     padding-top: 40px;
