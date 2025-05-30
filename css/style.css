@@ -326,8 +326,11 @@ ul {
 }
 .footer-logo h4 {
   color: #fff;
-  font-family: "IBM Plex Mono", monospace;
   font-size: 42px;
+  font-family: "IBM Plex Mono", monospace;
+}
+.footer-logo h4 span {
+  font-family: "IBM Plex Mono", monospace;
 }
 .footer-logo h3 span,
 .footer-logo h4 span {

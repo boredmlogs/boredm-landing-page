@@ -46,11 +46,7 @@
 
 /* cta */
 #cta {
-  background: linear-gradient(
-    to right,
-    var(--primaryColor) 50%,
-    var(--lightBgColor) 50%
-  );
+  background: linear-gradient(to right, #000 50%, var(--lightBgColor) 50%);
   margin-top: 100px;
 }
 #cta .col-md-2 {
@@ -94,6 +90,7 @@
   margin-left: -85px;
   margin-right: -85px;
   margin-top: -100px;
+  margin-bottom: -1px;
 }
 .cta-wrapper-right {
   padding-left: 100px;
@@ -235,9 +232,7 @@
   #pricing {
     padding-top: 90px;
   }
-  .cta-img-col {
-    display: none;
-  }
+
   .cta-wrapper-all {
     padding: 60px 0;
   }
@@ -256,8 +251,16 @@
   #faq {
     padding-top: 90px;
   }
+  .cta-wrapper-img {
+    display: none;
+  }
 }
 
+@media (max-width: 992px) {
+  .cta-img-col {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   #pricing {
     padding-top: 50px;
