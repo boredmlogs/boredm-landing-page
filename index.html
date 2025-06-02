@@ -75,58 +75,11 @@
           <div class="container">
             <h5>Empowering Growth Through Trusted Partnerships</h5>
             <div class="partnerships-wrapper">
-              <div class="slider" dir="rtl">
-                <div class="img">
-                  <img src="images/partnership-1.svg" alt="gaeoengineers" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-2.svg" alt="shannon" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-3.svg" alt="ues" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-4.svg" alt="bar" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-5.svg" alt="gzn" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-6.svg" alt="trc" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-1.svg" alt="gaeoengineers" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-2.svg" alt="gaeoengineers" />
-                </div>
+              <div class="tech-slideshow">
+                <div class="mover-1"></div>
               </div>
-
-              <div class="slider-2">
-                <div class="img">
-                  <img src="images/partnership-7.svg" alt="gaeoengineers" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-8.svg" alt="shannon" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-9.svg" alt="ues" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-10.svg" alt="bar" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-11.svg" alt="gzn" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-12.svg" alt="trc" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-13.svg" alt="gaeoengineers" />
-                </div>
-                <div class="img">
-                  <img src="images/partnership-14.svg" alt="gaeoengineers" />
-                </div>
+              <div class="tech-slideshow-2">
+                <div class="mover-1"></div>
               </div>
             </div>
           </div>
@@ -825,7 +778,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="js/script.js"></script>
 
@@ -845,12 +797,12 @@
           0: {
             items: 1,
             margin: 20,
-            stagePadding: 40,
+            stagePadding: 0,
           },
           767: {
             items: 1,
             margin: 30,
-            stagePadding: 90,
+            stagePadding: 0,
           },
           1025: {
             items: 1,
@@ -873,64 +825,6 @@
       $(document).on("click", ".customNextBtn", function (e) {
         e.preventDefault();
         owl.trigger("next.owl.carousel", [1000]);
-      });
-
-      $(function () {
-        $(".slider").slick({
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 5000,
-          arrows: false,
-          swipe: false,
-          slidesToShow: 6,
-          infinite: true,
-          cssEase: "linear",
-          pauseOnFocus: false,
-          pauseOnHover: false,
-          rtl: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-              },
-            },
-          ],
-        });
-
-        $(".slider-2").slick({
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 5000,
-          infinite: true,
-          arrows: false,
-          swipe: false,
-          slidesToShow: 6,
-          cssEase: "linear",
-          pauseOnFocus: false,
-          pauseOnHover: false,
-          rtl: false,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 4,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-              },
-            },
-          ],
-        });
       });
 
       $(".financial-slider").owlCarousel({
@@ -962,6 +856,14 @@
             stagePadding: 100,
           },
         },
+      });
+
+      $(document).ready(function () {
+        const path = window.location.pathname;
+
+        if (path === "/" || path === "/index.html") {
+          $(".main-nav__items--menu a:first-of-type").addClass("active");
+        }
       });
     </script>
   </body>

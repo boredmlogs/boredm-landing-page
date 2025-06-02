@@ -254,6 +254,9 @@
   .cta-wrapper-img {
     display: none;
   }
+  .testimonials-wrapper {
+    padding: 0 30px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -261,7 +264,18 @@
     display: none;
   }
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .testimonials-wrapper .col-md-6 {
+    width: 50%;
+  }
+}
 @media (max-width: 767px) {
+  .testimonials-info {
+    margin-top: 10px;
+  }
+  .testimonials-wrapper {
+    padding: 0 20px;
+  }
   #pricing {
     padding-top: 50px;
   }

@@ -1,10 +1,9 @@
 #hero {
-  padding-top: 100px;
+  padding-top: 193px;
   background-color: var(--lightBgColor);
 }
-.hero-img-full-width {
-  max-width: 1440px;
-  margin: 0 auto;
+.hero-img-full-width img {
+  width: 100%;
 }
 .hero-wrapper {
   max-width: 892px;
@@ -35,19 +34,61 @@
 #partnerships .container {
   max-width: 1462px;
 }
-.slider-2 {
-  margin-top: 20px;
-}
-.slick-track {
-  display: flex;
-  align-items: center;
-}
-.partnerships-wrapper {
+.tech-slideshow {
+  height: 81px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
   overflow: hidden;
+  transform: translate3d(0, 0, 0);
 }
-.slick-slide {
-  text-align: center;
-  margin: 0 40px;
+.tech-slideshow > div {
+  height: 81px;
+  width: 6664px;
+  background: url(../images/parthership-slide-1.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow 70s linear infinite;
+}
+@keyframes moveSlideshow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.tech-slideshow-2 {
+  height: 81px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  margin-top: 10px;
+}
+.tech-slideshow-2 > div {
+  height: 81px;
+  width: 5752px;
+  background: url(../images/parthership-slide-2.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow2 60s linear infinite;
+}
+
+@keyframes moveSlideshow2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 #financial_solutions {
@@ -160,7 +201,7 @@
   padding: 150px 0;
 }
 .how-it-works-text h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .how-it-works-img {
   background: var(--primaryColor);
@@ -168,14 +209,15 @@
   text-align: center;
 }
 .how-it-works-img img {
-  max-width: 260px;
+  max-width: 245px;
 }
 .how-it-works-steps-wrapper {
   max-width: 613px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .how-it-works-steps-wrapper .accordion-item {
   background: transparent;
+  padding: 20px 0;
 }
 .how-it-works-steps-wrapper .accordion-item:first-of-type {
   border-top: 1px solid #d9d9d9;
@@ -198,7 +240,7 @@
 }
 @media (max-width: 1024px) {
   #hero {
-    padding-top: 60px;
+    padding-top: 150px;
   }
   .hero-wrapper h1 {
     font-size: 46px;
@@ -223,6 +265,25 @@
   }
 }
 @media (max-width: 767px) {
+  .how-it-works-steps-wrapper .accordion-item {
+    padding: 10px 0;
+  }
+  .tech-slideshow-2 {
+    height: 60px;
+  }
+  .tech-slideshow-2 > div {
+    height: 60px;
+    width: 4296px;
+    background: url(../images/parthership-slide-2-mobile.png);
+  }
+  .tech-slideshow {
+    height: 60px;
+  }
+  .tech-slideshow > div {
+    height: 60px;
+    background: url(../images/parthership-slide-1-mobile.png);
+    width: 4974px;
+  }
   .slick-slide img {
     aspect-ratio: 16 / 9;
   }
@@ -230,7 +291,7 @@
     margin-top: 0px;
   }
   #hero {
-    padding-top: 40px;
+    padding-top: 130px;
   }
   .hero-wrapper h1 {
     font-size: 36px;
@@ -264,21 +325,8 @@
     font-size: 14px;
   }
 
-  .view-more-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 20px;
-  }
-  .view-more-wrapper .separator {
-    width: 26px;
-    height: 1px;
-  }
   #about_us {
     padding: 50px 0 30px;
-  }
-  #about_us .row {
-    flex-direction: column-reverse;
   }
   .about-text {
     padding-top: 10px;
@@ -301,5 +349,26 @@
   }
   .how-it-works-img img {
     max-width: 180px;
+  }
+  .features-col-single__img img {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #features .col-md-4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-more-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .view-more-wrapper .separator {
+    display: none;
   }
 }

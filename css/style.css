@@ -159,6 +159,24 @@ ul {
 #header {
   border-bottom: 1px solid #d1d1d1;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+}
+.main-nav__items--menu a {
+  position: relative;
+}
+.main-nav__items--menu > a.active::before {
+  content: "";
+  position: absolute;
+  background: var(--primaryColor);
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -2px;
 }
 .main-nav {
   display: flex;
@@ -454,7 +472,7 @@ ul {
   a,
   li,
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .body-large {
     font-size: 16px;
