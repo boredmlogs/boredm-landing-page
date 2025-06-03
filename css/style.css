@@ -38,7 +38,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hedvig Letters Sans", sans-serif;
   color: var(--primaryColor);
   font-weight: 400;
 }
@@ -205,6 +204,8 @@ ul {
 }
 .dropdown-item-custom > span {
   position: relative;
+  font-size: 14px;
+  cursor: pointer;
 }
 .dropdown-item-custom > span::before {
   content: "";
@@ -221,27 +222,28 @@ ul {
 .dropdown-menu-custom {
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 160px;
+  left: -20px;
+  min-width: 170px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
   transition: all 0.2s ease;
   z-index: 999;
+  border: 1px solid #d1d1d1;
+  border-radius: 0;
+  border-top: none;
+  margin-top: 31px;
 }
 
-.dropdown-item-custom:hover .dropdown-menu-custom {
+.dropdown-item-custom .dropdown-menu-custom.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0px);
 }
 
 .dropdown-menu-custom a {
   display: block;
-  padding: 8px 15px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 .dropdown-menu-custom a:first-of-type {
@@ -453,6 +455,18 @@ ul {
   .footer-logo h4 {
     font-size: 22px;
   }
+  .dropdown-menu-custom {
+    margin-top: 10px;
+    border: 1px solid #d1d1d1;
+    position: relative;
+    max-height: 0;
+  }
+  .dropdown-menu-custom.active {
+    max-height: 200px;
+  }
+  .dropdown-menu-custom a {
+    padding: 7px 20px;
+  }
 }
 @media (max-width: 767px) {
   .small-heading {
@@ -485,7 +499,7 @@ ul {
     padding: 0 20px;
   }
   .main-nav__logo img {
-    width: 120px;
+    width: 110px;
   }
   .footer-menu-wrapper {
     margin-bottom: 25px;
@@ -520,5 +534,8 @@ ul {
   }
   .footer-logo h4 {
     font-size: 10px;
+  }
+  #header {
+    padding: 13px 0;
   }
 }

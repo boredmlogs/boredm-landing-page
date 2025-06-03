@@ -6,3 +6,7 @@ const handleMenu = () => {
 
 $(document).on("click", ".main-nav__hamburger", handleMenu);
 $(document).on("click", ".main-nav__items a", handleMenu);
+
+$(document).on("click", ".dropdown-item-custom span", function () {
+  $(".dropdown-menu-custom").toggleClass("active");
+});

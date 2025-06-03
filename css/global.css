@@ -33,6 +33,7 @@
   padding: 0;
   padding-bottom: 10px;
   color: var(--textColor);
+  line-height: 1.6;
 }
 .accordion-button::after {
   background-image: url(../images/icons/plus-icon.svg);
