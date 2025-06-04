@@ -273,8 +273,10 @@
   }
   .tech-slideshow-2 > div {
     height: 60px;
-    width: 4296px;
+    width: 8832px;
     background: url(../images/parthership-slide-2-mobile.png);
+    background-size: auto 100%;
+    animation: moveSlideshow2 110s linear infinite;
   }
   .tech-slideshow {
     height: 60px;
@@ -282,7 +284,9 @@
   .tech-slideshow > div {
     height: 60px;
     background: url(../images/parthership-slide-1-mobile.png);
-    width: 4974px;
+    width: 7462px;
+    background-size: auto 100%;
+    animation: moveSlideshow 110s linear infinite;
   }
   .slick-slide img {
     aspect-ratio: 16 / 9;

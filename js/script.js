@@ -9,4 +9,15 @@ $(document).on("click", ".main-nav__items a", handleMenu);
 
 $(document).on("click", ".dropdown-item-custom span", function () {
   $(".dropdown-menu-custom").toggleClass("active");
+  $(this).toggleClass("active");
+});
+
+$(document).on("click", function (e) {
+  if (
+    !$(e.target).closest(".dropdown-menu-custom, .dropdown-item-custom").length
+  ) {
+    $(".dropdown-menu-custom, .dropdown-item-custom span").removeClass(
+      "active"
+    );
+  }
 });
