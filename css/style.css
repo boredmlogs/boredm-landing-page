@@ -420,30 +420,48 @@ ul {
     margin-top: -8px;
   }
   .main-nav__items {
-    position: fixed;
-    min-height: 100vh;
+    position: absolute;
     width: 100%;
-    top: 0;
+    top: 100%;
     left: 0;
     background: #fff;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     z-index: 99;
     opacity: 0;
     pointer-events: none;
-    transform: scale(0.7);
+    transform: translateY(10px);
     transition: all 0.2s ease;
+    border-bottom: 1px solid #d1d1d1;
   }
   .main-nav__items.active {
-    transform: scale(1);
+    transform: translateY(0);
     pointer-events: all;
     opacity: 1;
   }
   .main-nav__items--menu {
     flex-direction: column;
-    text-align: center;
-    margin-bottom: 30px;
+    margin: 0;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+  .main-nav__items--menu a {
+    width: 100%;
+    padding: 10px 31px;
+  }
+  .main-nav__items--menu a::before {
+    display: none;
+  }
+  .dropdown-item-custom {
+    padding: 10px 30px;
+    width: 100%;
+  }
+  .main-nav__items--menu a.active {
+    background: var(--primaryColor);
+    color: #fff !important;
   }
   .dropdown-menu-custom {
     text-align: left;
@@ -472,12 +490,19 @@ ul {
     border: 1px solid #d1d1d1;
     position: relative;
     max-height: 0;
+    border-radius: 10px;
   }
   .dropdown-menu-custom.active {
     max-height: 200px;
   }
   .dropdown-menu-custom a {
     padding: 7px 20px;
+  }
+  .main-nav__items--login {
+    padding: 0px 30px 15px;
+  }
+  .dropdown-menu-custom a {
+    border-radius: 5px;
   }
 }
 @media (max-width: 767px) {
@@ -549,5 +574,24 @@ ul {
   }
   #header {
     padding: 13px 0;
+  }
+  .dropdown-item-custom {
+    padding: 10px 20px;
+  }
+  .main-nav__items--menu a {
+    padding: 10px 20px;
+  }
+  .main-nav__items--login {
+    padding: 0 20px 15px;
+  }
+
+  .dropdown-item-custom > span,
+  .main-nav__items--login a,
+  .main-nav__items--menu a {
+    font-size: 16px;
+  }
+  .dropdown-menu-custom a {
+    padding: 7px 20px;
+    font-size: 14px;
   }
 }
