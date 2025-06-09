@@ -35,7 +35,7 @@
   max-width: 1462px;
 }
 .tech-slideshow {
-  height: 81px;
+  height: 60px;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
@@ -43,15 +43,15 @@
   transform: translate3d(0, 0, 0);
 }
 .tech-slideshow > div {
-  height: 81px;
-  width: 6664px;
+  height: 60px;
+  width: 4150px;
   background: url(../images/parthership-slide-1.png);
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 70s linear infinite;
+  animation: moveSlideshow 40s linear infinite;
 }
 @keyframes moveSlideshow {
   0% {
@@ -59,35 +59,6 @@
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-.tech-slideshow-2 {
-  height: 81px;
-  max-width: 100%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  margin-top: 10px;
-}
-.tech-slideshow-2 > div {
-  height: 81px;
-  width: 5752px;
-  background: url(../images/parthership-slide-2.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-  animation: moveSlideshow2 60s linear infinite;
-}
-
-@keyframes moveSlideshow2 {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
   }
 }
 
@@ -268,25 +239,15 @@
   .how-it-works-steps-wrapper .accordion-item {
     padding: 10px 0;
   }
-  .tech-slideshow-2 {
-    height: 60px;
-  }
-  .tech-slideshow-2 > div {
-    height: 60px;
-    width: 8832px;
-    background: url(../images/parthership-slide-2-mobile.png);
-    background-size: auto 100%;
-    animation: moveSlideshow2 110s linear infinite;
-  }
   .tech-slideshow {
-    height: 60px;
+    height: 45px;
   }
   .tech-slideshow > div {
-    height: 60px;
+    height: 45px;
     background: url(../images/parthership-slide-1-mobile.png);
-    width: 7462px;
+    width: 2932px;
     background-size: auto 100%;
-    animation: moveSlideshow 110s linear infinite;
+    animation: moveSlideshow 40s linear infinite;
   }
   .slick-slide img {
     aspect-ratio: 16 / 9;
