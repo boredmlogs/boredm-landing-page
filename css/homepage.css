@@ -35,7 +35,7 @@
   max-width: 1462px;
 }
 .tech-slideshow {
-  height: 60px;
+  height: 65px;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
@@ -43,9 +43,9 @@
   transform: translate3d(0, 0, 0);
 }
 .tech-slideshow > div {
-  height: 60px;
+  height: 65px;
   width: 4150px;
-  background: url(../images/parthership-slide-1.png);
+  background: url(../images/parthership-slide-1.svg);
   position: absolute;
   top: 0;
   left: 0;
@@ -244,7 +244,7 @@
   }
   .tech-slideshow > div {
     height: 45px;
-    background: url(../images/parthership-slide-1-mobile.png);
+    background: url(../images/parthership-slide-1-mobile.svg);
     width: 2932px;
     background-size: auto 100%;
     animation: moveSlideshow 40s linear infinite;
