@@ -1,0 +1,34 @@
+#features .col-12:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+#features {
+  padding-bottom: 100px !important;
+}
+
+#how_it_works_section {
+  background: var(--lightBgColor);
+  padding: 150px 0;
+}
+
+#testimonials {
+  padding: 150px 0;
+}
+
+@media (max-width: 1024px) {
+  #how_it_works_section,
+  #testimonials {
+    padding: 80px 0;
+  }
+  #features {
+    padding-bottom: 30px !important;
+  }
+}
+@media (max-width: 767px) {
+  #how_it_works_section,
+  #testimonials {
+    padding: 50px 0;
+  }
+  #features {
+    padding-bottom: 50px !important;
+  }
+}

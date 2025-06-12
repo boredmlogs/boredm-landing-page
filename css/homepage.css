@@ -35,7 +35,7 @@
   max-width: 1462px;
 }
 .tech-slideshow {
-  height: 65px;
+  height: 60px;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
@@ -43,7 +43,7 @@
   transform: translate3d(0, 0, 0);
 }
 .tech-slideshow > div {
-  height: 65px;
+  height: 60px;
   width: 4150px;
   background: url(../images/parthership-slide-1.svg);
   position: absolute;
@@ -171,21 +171,11 @@
   background: var(--lightBgColor);
   padding: 150px 0;
 }
-.how-it-works-text h2 {
-  margin-bottom: 20px;
-}
+
 .how-it-works-img {
   background: var(--primaryColor);
-  padding: 30px;
-  text-align: center;
 }
-.how-it-works-img img {
-  max-width: 245px;
-}
-.how-it-works-steps-wrapper {
-  max-width: 613px;
-  margin-top: 60px;
-}
+
 .how-it-works-steps-wrapper .accordion-item {
   background: transparent;
   padding: 20px 0;
@@ -303,18 +293,7 @@
   #how_it_works_section {
     padding: 50px 0;
   }
-  .how-it-works-text h2 {
-    margin-bottom: 12px;
-  }
-  .how-it-works-steps-wrapper {
-    margin-top: 25px;
-  }
-  .how-it-works-img {
-    margin-top: 25px;
-  }
-  .how-it-works-img img {
-    max-width: 180px;
-  }
+
   .features-col-single__img img {
     width: 100%;
   }

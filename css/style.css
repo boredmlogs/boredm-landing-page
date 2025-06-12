@@ -19,6 +19,10 @@
   color: #fff;
 }
 
+.white-box {
+  background: #fff;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -40,6 +44,9 @@ h5,
 h6 {
   color: var(--primaryColor);
   font-weight: 400;
+}
+h6 {
+  font-weight: 500;
 }
 
 h1 {
@@ -118,7 +125,7 @@ ul {
 .btn-arrow-all {
   background-color: transparent;
   color: var(--primaryColor);
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 0px;
   border: 1px solid var(--primaryColor);
   display: inline-flex;
@@ -244,7 +251,7 @@ ul {
   border: 1px solid #d1d1d1;
   border-radius: 0;
   border-top: none;
-  margin-top: 24px;
+  margin-top: 22px;
 }
 
 .dropdown-item-custom .dropdown-menu-custom.active {
@@ -376,6 +383,24 @@ ul {
   width: 100%;
 }
 
+.first-section {
+  padding-top: 150px;
+}
+
+.section-padding-all {
+  padding: 150px 0;
+}
+.section-heading-wrapper-all {
+  margin-bottom: 50px;
+}
+.row-40 .col-12 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.row-40 {
+  margin: 0 -20px;
+  row-gap: 50px;
+}
 @media (max-width: 1350px) {
   .container {
     padding: 0 50px;
@@ -393,8 +418,32 @@ ul {
   }
 }
 @media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
   .container {
     padding: 0 30px;
+  }
+  .row-40 .col-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .row-40 {
+    margin: 0 -15px;
+    row-gap: 30px;
   }
   .main-nav {
     justify-content: space-between;
@@ -504,8 +553,23 @@ ul {
   .dropdown-menu-custom a {
     border-radius: 5px;
   }
+  .section-padding-all {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 767px) {
+  .row-40 {
+    row-gap: 25px;
+  }
+  .section-heading-wrapper-all {
+    margin-bottom: 30px;
+  }
+  .section-padding-all {
+    padding: 50px 0;
+  }
+  .first-section {
+    padding-top: 110px !important;
+  }
   .small-heading {
     margin-bottom: 5px;
   }
@@ -513,8 +577,11 @@ ul {
     font-size: 32px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.2;
+  }
+  h4 {
+    font-size: 20px;
   }
   h5 {
     font-size: 18px;

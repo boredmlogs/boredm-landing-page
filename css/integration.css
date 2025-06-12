@@ -1,0 +1,116 @@
+.integration-single h5 {
+  margin-top: 20px;
+}
+
+#integration_details {
+  background-color: var(--lightBgColor);
+  padding-bottom: 80px;
+}
+.integration-details-wrapper {
+  text-align: center;
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.integration-details-wrapper h1 {
+  font-size: 32px;
+  margin: 30px 0 10px;
+}
+
+#integration-info {
+  padding-top: 60px;
+}
+
+#integration-info .container {
+  max-width: 990px;
+}
+
+.integration-info-col {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+.integration-info-col > div {
+  flex-basis: 33%;
+  max-width: 33%;
+}
+.integration-info-col > div:not(:last-of-type) {
+  border-right: 1px solid #d9d9d9;
+}
+.integration-info-col > div:nth-child(2) {
+  padding-left: 56px;
+}
+.integration-info-col > div:last-of-type {
+  text-align: center;
+}
+.integration-info-col__single--wrapper {
+  text-align: left;
+  display: inline-block;
+}
+.integration-info-col > div p:last-of-type {
+  color: var(--primaryColor);
+  margin-top: 10px;
+}
+.integration-text h4 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.integration-text ul {
+  padding-left: 25px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.integration-text ul li {
+  list-style: disc;
+}
+.integration-text a {
+  margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  .integration-details-wrapper h1 {
+    font-size: 28px;
+  }
+  #integration_details {
+    padding-bottom: 50px;
+  }
+  .integration-info-col > div:nth-child(2) {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #integration-info {
+    padding-top: 50px;
+  }
+  .integration-info-col {
+    flex-direction: column;
+  }
+  .integration-info-col > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .integration-info-col > div:nth-child(2) {
+    padding-left: 0;
+  }
+  .integration-info-col > div:not(:last-of-type) {
+    border: none;
+  }
+  .integration-info-col__single--wrapper,
+  .integration-info-col__single {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .integration-info-col > div p:last-of-type {
+    margin-top: 0;
+  }
+  .integration-info-col {
+    margin-bottom: 40px;
+  }
+  .integration-text a {
+    margin-top: 15px;
+  }
+}

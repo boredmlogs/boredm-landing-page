@@ -1,0 +1,29 @@
+.pricing-heading h1 {
+  max-width: 626px;
+  margin: 0 auto;
+}
+.pricing-wrapper-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#benefits {
+  background: var(--lightBgColor);
+}
+#faq {
+  padding-bottom: 150px !important;
+}
+
+@media (max-width: 1024px) {
+  #faq {
+    padding-bottom: 80px !important;
+  }
+}
+@media (max-width: 767px) {
+  .pricing-wrapper-parent {
+    gap: 20px;
+  }
+  #faq {
+    padding-bottom: 50px !important;
+  }
+}
