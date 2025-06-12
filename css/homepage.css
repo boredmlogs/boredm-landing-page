@@ -77,26 +77,7 @@
 .financial-slider-wrapper {
   position: relative;
 }
-/* .financial-slider-wrapper::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  width: 60px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9;
-}
-.financial-slider-wrapper::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
-  width: 60px;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 9;
-} */
+
 .financial-solution-single {
   padding: 30px;
   background-size: cover !important;
@@ -174,7 +155,6 @@
 }
 
 .about-img img {
-  /* the <img> itself */
   width: 100%; /* scale responsively */
   height: auto; /* keep aspect ratio */
   display: block; /* remove default inline gap */
@@ -190,6 +170,10 @@
   background: var(--primaryColor);
   padding: 30px;
   text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .how-it-works-img img {
   max-width: 245px;
