@@ -166,6 +166,20 @@
 .about-text a {
   margin-top: 55px;
 }
+.about-img {
+  /* the wrapper div */
+  max-width: 420px; /* cap desktop width – change to taste */
+  width: 100%;
+  background: #fff;
+}
+
+.about-img img {
+  /* the <img> itself */
+  width: 100%; /* scale responsively */
+  height: auto; /* keep aspect ratio */
+  display: block; /* remove default inline gap */
+  object-fit: contain; /* no cropping; use 'cover' if you want a zoom-fill */
+}
 
 #how_it_works_section {
   background: var(--lightBgColor);
@@ -174,8 +188,16 @@
 
 .how-it-works-img {
   background: var(--primaryColor);
+  padding: 30px;
+  text-align: center;
 }
-
+.how-it-works-img img {
+  max-width: 245px;
+}
+.how-it-works-steps-wrapper {
+  max-width: 613px;
+  margin-top: 60px;
+}
 .how-it-works-steps-wrapper .accordion-item {
   background: transparent;
   padding: 20px 0;
