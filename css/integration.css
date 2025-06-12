@@ -69,7 +69,14 @@
 .integration-text a {
   margin-top: 50px;
 }
-
+.integration-logo-wrapp {
+  background-color: var(--lightBgColor);
+  border-radius: 10px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 1024px) {
   .integration-details-wrapper h1 {
     font-size: 28px;
@@ -82,6 +89,12 @@
   }
 }
 @media (max-width: 767px) {
+  .integration-logo-wrapp {
+    min-height: 140px;
+  }
+  .integration-logo-wrapp img {
+    width: 60px;
+  }
   #integration-info {
     padding-top: 50px;
   }
