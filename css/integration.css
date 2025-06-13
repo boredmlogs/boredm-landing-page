@@ -77,6 +77,12 @@
   justify-content: center;
   align-items: center;
 }
+.integration-logo-wrapp img {
+  transition: all 0.2s ease;
+}
+.integration-single a:hover img {
+  transform: scale(1.1);
+}
 @media (max-width: 1024px) {
   .integration-details-wrapper h1 {
     font-size: 28px;

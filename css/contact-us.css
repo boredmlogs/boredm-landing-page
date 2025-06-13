@@ -1,0 +1,230 @@
+.contact-form-wrapper {
+  background: var(--lightBgColor);
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.form-group textarea,
+.form-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cecece;
+  background: none;
+  padding-bottom: 15px;
+  outline: none;
+  font-size: 14px;
+}
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+.form-group {
+  margin-bottom: 45px;
+}
+.contact-form-wrapper button {
+  margin-top: -10px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.how-we-can-help-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.how-we-can-help-wrapper h3 {
+  margin-bottom: 10px;
+}
+.contact-info-wrapper-parent {
+  background: var(--lightBgColor);
+  margin-top: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+#contact_us .container > .row {
+  margin: 0 -20px;
+}
+#contact_us .container > .row > .col-12 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contact-info-wrapper {
+  display: flex;
+}
+.contact-info {
+  flex-basis: 33.333%;
+  max-width: 33.333%;
+  padding-right: 10px;
+}
+.contact-info p {
+  color: #14171a;
+}
+.contact-info:first-of-type p {
+  max-width: 150px;
+}
+.contact-info:not(:first-of-type) {
+  padding-left: 30px;
+  border-left: 1px solid #d9d9d9;
+}
+.contact-info h6 {
+  color: #5e5e5e;
+  margin-bottom: 10px;
+}
+.social-media-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 35px;
+}
+.social-media-wrapper p {
+  color: #14171a;
+}
+.social-media-wrapper__icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.social-media-wrapper__icons a {
+  border: 1px solid #d9d9d9;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.social-media-wrapper__icons a:hover {
+  transform: translateY(-3px);
+}
+#contact_support {
+  padding: 100px 0 150px;
+}
+.contact-support-single {
+  background: var(--lightBgColor);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.contact-support-single__icon {
+  flex-basis: 44px;
+  max-width: 44px;
+}
+.contact-support-single__text {
+  flex: 1;
+  padding-left: 40px;
+}
+.contact-support-single__text h5 {
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .contact-form-wrapper {
+    padding: 20px;
+  }
+  #contact_us .container > .row {
+    margin: 0 -10px;
+  }
+  #contact_us .container > .row > .col-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .contact-info-wrapper {
+    flex-wrap: wrap;
+  }
+  .contact-info {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .contact-info:first-of-type {
+    margin-bottom: 20px;
+  }
+  .contact-info:nth-child(2) {
+    border: none;
+  }
+  .contact-info:nth-child(2),
+  .contact-info:nth-child(3) {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: 0;
+  }
+  .contact-info:nth-child(3) {
+    padding-left: 10px;
+  }
+  .contact-info:first-of-type p {
+    max-width: 100%;
+    text-wrap: nowrap;
+  }
+  .how-we-can-help-wrapper > p {
+    margin-bottom: 30px;
+  }
+  .contact-info-wrapper-parent {
+    padding: 20px;
+  }
+  .contact-support-single {
+    padding: 15px 20px;
+  }
+  .contact-support-single__text {
+    padding-left: 15px;
+  }
+  #contact_support {
+    padding: 80px 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  #contact_support {
+    padding: 50px 0 30px;
+  }
+  .contact-form-wrapper {
+    padding-bottom: 40px;
+  }
+  .how-we-can-help-wrapper {
+    margin-top: 30px;
+  }
+  .how-we-can-help-wrapper > p {
+    margin-bottom: 0;
+  }
+  .contact-info-wrapper-parent {
+    margin-top: 20px;
+  }
+  .contact-info:nth-child(3) {
+    padding-left: 15px;
+  }
+  .row-40 {
+    row-gap: 20px !important;
+  }
+  .contact-support-single {
+    padding: 17px 20px;
+  }
+}
+@media (max-width: 500px) {
+  .form-group {
+    margin-bottom: 25px;
+  }
+  .form-group textarea {
+    height: 117px;
+  }
+  .contact-info:nth-child(2),
+  .contact-info:nth-child(3) {
+    max-width: 100%;
+    flex-basis: 100%;
+    border: none;
+  }
+  .contact-info:nth-child(3) {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .social-media-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-info h6 {
+    margin-bottom: 5px;
+  }
+  .social-media-wrapper {
+    margin-top: 20px;
+    gap: 10px;
+  }
+}

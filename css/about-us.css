@@ -127,7 +127,7 @@
   .transforming-div-wrapper {
     display: flex;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .transforming-div-wrapper > div {
     flex-basis: 50%;
@@ -143,20 +143,7 @@
     margin-top: 0;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
-  .blog-card-single a {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .blog-card-single__img {
-    flex-basis: 180px;
-    max-width: 180px;
-  }
-  .blog-card-single__text {
-    flex: 1;
-  }
-}
+
 @media (max-width: 767px) {
   .empowering-img img {
     width: 100%;
@@ -198,19 +185,22 @@
   .financial-img {
     text-align: center;
   }
-  .transforming-div-wrapper {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .transforming-div-wrapper > div {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
+
   .transforming-crypto-wrapper h2 {
     margin-bottom: 5px;
   }
   #blog {
     padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .transforming-div-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .transforming-div-wrapper > div {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
