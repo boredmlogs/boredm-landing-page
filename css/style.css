@@ -417,6 +417,10 @@ ul {
     font-size: 30px;
   }
 }
+.labs-fix {
+  padding-top: 20px !important;
+  margin-top: -40px !important;
+}
 @media (max-width: 1024px) {
   h1 {
     font-size: 40px;
@@ -662,3 +666,4 @@ ul {
     font-size: 14px;
   }
 }
+
