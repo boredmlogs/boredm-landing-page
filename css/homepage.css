@@ -165,15 +165,16 @@
   background: var(--lightBgColor);
   padding: 150px 0;
 }
-
 .how-it-works-img {
   background: var(--primaryColor);
   padding: 30px;
   text-align: center;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 .how-it-works-img img {
   max-width: 245px;
