@@ -133,3 +133,40 @@
     margin-top: 15px;
   }
 }
+#how_it_works_section {
+  background-color: transparent !important;
+  /* Or use white if you prefer */
+  /* background-color: white !important; */
+}
+/* Equal height layout for financial management section */
+#financial_management .row {
+    display: flex;
+    align-items: stretch;
+}
+
+#financial_management .col-lg-9,
+#financial_management .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#financial_management .financial-left-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#financial_management .transforming-div-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px; /* Adjust this value for spacing between boxes */
+}
+
+#financial_management .transforming-crypto-wrapper {
+    flex: 1; /* Makes each box take equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
