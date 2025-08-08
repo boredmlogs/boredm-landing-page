@@ -249,8 +249,12 @@
   padding: 20px;
 }
 .testimonials-img img {
-  width: 100%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 .testimonials-info p:first-of-type {
   margin-bottom: 15px;

@@ -35,6 +35,11 @@ img {
   -o-user-select: none;
   user-select: none;
 }
+  font-size: 13px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
 
 h1,
 h2,
