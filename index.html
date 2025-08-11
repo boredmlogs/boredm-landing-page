@@ -115,8 +115,9 @@
   transition: background-color .2s ease, color .2s ease, transform .15s ease;
 }
 #hero .btn-arrow-all:hover { background:#333333; color:#ffffff !important; }
-#hero .btn-arrow-all svg { fill: currentColor; transition: transform .15s ease; }
-#hero .btn-arrow-all:hover svg { transform: translateX(3px); }
+#hero .btn-arrow-all svg { transition: transform .15s ease; }
+#hero .btn-arrow-all:hover svg { transform: translateX(3px); fill: #ffffff !important;}
+#hero .btn-arrow-all svg,
     </style>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -971,5 +972,14 @@
         }
       });
     </script>
+    <style>
+    #hero .btn-arrow-all svg path {
+  fill: #ffffff !important;
+}
+
+#hero .btn-arrow-all:hover svg path {
+  fill: #ffffff !important;
+}</style>
+</body>
   </body>
 </html>
