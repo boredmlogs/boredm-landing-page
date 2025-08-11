@@ -22,3 +22,6 @@
     padding-bottom: 30px;
   }
 }
+#review img {
+  border-radius: 0 !important;
+}
