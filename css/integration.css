@@ -170,3 +170,58 @@
     flex-direction: column;
     justify-content: center;
 }
+
+/* Make the rig image fill its column on the Integration page */
+.how-it-works-img {
+  padding: 0;             /* remove any inner gutter */
+  background: transparent;
+}
+
+.how-it-works-img img {
+  display: block;
+  width: 100% !important;  /* fill the column width */
+  max-width: 100% !important;
+  height: auto !important; /* keep aspect ratio */
+}
+/* Make rig image fill column on How It Works section */
+#how_it_works_section .how-it-works-img.white-box {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#how_it_works_section .how-it-works-img.white-box img {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+/* Remove left padding on image column */
+#how_it_works_section .col-12.col-md-6:last-child {
+  padding-left: 0 !important;
+}
+
+/* Remove gutter between columns in this section */
+#how_it_works_section .row.align-items-center {
+  --bs-gutter-x: 0;
+}
+/* Cap rig image size + restore spacing */
+#how_it_works_section .how-it-works-img.white-box img {
+  width: 100% !important;
+  /* responsive cap: min 480px, ~42vw, max 780px */
+  max-width: clamp(480px, 35vw, 780px) !important;
+  height: auto !important;
+  margin-left: auto;              /* keep some space from the text column */
+}
+
+#how_it_works_section .row.align-items-center {
+  --bs-gutter-x: 28px;            /* restore column gutter */
+}
+
+/* light padding on the image column so it doesn't hug the edge */
+#how_it_works_section .col-12.col-md-6:last-child {
+  padding-left: 16px !important;
+  padding-right: 0 !important;
+}
