@@ -18,7 +18,7 @@
 }
 .achievements-single {
   background: var(--lightBgColor);
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 20px;
   min-height: 370px;
   display: flex;
@@ -54,7 +54,7 @@
 }
 .financial-left-wrapper {
   background: #f7f9f9;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 80px 60px 0;
 }
 .financial-text {
@@ -72,7 +72,7 @@
 .transforming-crypto-wrapper {
   background: var(--lightBgColor);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 .transforming-crypto-wrapper h5 {
   margin-bottom: 60px;
@@ -87,7 +87,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 @media (max-width: 1024px) {
   #who_we_are {
