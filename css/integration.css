@@ -18,11 +18,13 @@
 }
 
 #integration-info {
-  padding-top: 60px;
+  padding-top: 45px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #integration-info .container {
-  max-width: 990px;
+  max-width: 100%;
 }
 
 .integration-info-col {
@@ -175,6 +177,7 @@
 .how-it-works-img {
   padding: 0;             /* remove any inner gutter */
   background: transparent;
+  margin-bottom: 30px;    /* reduced gap below rig image */
 }
 
 .how-it-works-img img {
@@ -224,4 +227,27 @@
 #how_it_works_section .col-12.col-md-6:last-child {
   padding-left: 16px !important;
   padding-right: 0 !important;
+}
+
+/* Full‑bleed (edge‑to‑edge) layout for the Ready‑to‑Use Integrations block */
+#financial_management {
+  /* light gray background so the band spans the whole viewport width */
+  background: #f6f8f8; /* tweak to match your design system if needed */
+}
+/* Make the container span the full width just for this section */
+#financial_management .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/* Remove side margins on the immediate row so the background really hits the edges */
+#financial_management .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* Add comfortable inner padding to the content so text/images don’t touch the edges */
+#financial_management .financial-left-wrapper {
+  padding-left: clamp(20px, 6vw, 96px);
+  padding-right: clamp(20px, 6vw, 96px);
 }
