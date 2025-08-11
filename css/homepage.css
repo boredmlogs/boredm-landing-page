@@ -166,18 +166,30 @@
   padding: 150px 0;
 }
 .how-it-works-img {
-  background: var(--primaryColor);
-  padding: 30px;
-  text-align: center;
+  background: transparent;
+  padding: 0;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
+  display: block;
 }
 .how-it-works-img img {
-  max-width: 245px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure launchplan image fills its column */
+#how_it_works_section .how-it-works-img img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;  /* keep aspect ratio */
+}
+
+/* Remove padding on image column so image can use full grid width on desktop */
+#how_it_works_section .col-md-6:last-child {
+  padding-left: 0;
+  padding-right: 0;
 }
 .how-it-works-steps-wrapper {
   max-width: 613px;
