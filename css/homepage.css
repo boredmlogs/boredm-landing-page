@@ -24,8 +24,7 @@
 }
 
 #partnerships {
-  background: var(--lightBgColor);
-  padding: 84px 0 60px;
+  background: #fff;
 }
 #partnerships h5 {
   text-align: center;
@@ -323,4 +322,8 @@
   .view-more-wrapper .separator {
     display: none;
   }
+}
+
+#hero .btn-arrow-all svg {
+  fill: #fff !important;
 }

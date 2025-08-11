@@ -42,6 +42,82 @@
         border-radius: 12px;
       }
     </style>
+    <style>
+      /* Make overall background white */
+      :root { --lightBgColor: #ffffff; }
+      body { background: #ffffff; margin: 0; }
+
+      /* Serious, full-bleed hero with dark overlay */
+      #hero { 
+        position: relative; 
+        padding-top: 0; 
+        color: #ffffff; 
+        min-height: 88vh; /* show full image area */
+        display: flex; 
+        align-items: center; 
+      }
+      #hero .container,
+      #hero .container-fluid { 
+        position: relative; 
+        z-index: 2; 
+        padding-left: 0;
+        padding-right: clamp(12px, 2.5vw, 32px);
+        margin: 0;
+        max-width: none;
+        width: 100%;
+      }
+
+      .hero-img-full-width { position: absolute; inset: 0; z-index: 0; background: transparent; }
+      .hero-img-full-width img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Shift the background image focus to the right so text stays off the subject */
+        object-position: 70% center;
+        display: block;
+      }
+
+      .hero-overlay { position: absolute; inset: 0; z-index: 1; background: rgba(0,0,0,0.62); }
+
+      .hero-wrapper {
+        max-width: 820px;
+        padding: 120px 0 150px;
+        text-align: left;
+      }
+      .hero-wrapper h1 {
+        margin: 0 0 16px;
+        font-weight: 800;
+        font-size: clamp(36px, 5.2vw, 64px);
+        line-height: 1.05;
+      }
+      .hero-wrapper h5 {
+        margin: 0 0 28px;
+        font-weight: 400;
+        font-size: clamp(16px, 2vw, 22px);
+        line-height: 1.45;
+        opacity: 0.95;
+      }
+
+      @media (min-width: 1400px) {
+        .hero-img-full-width img { object-position: 78% center; }
+        .hero-wrapper { max-width: 760px; padding: 110px 0 140px; }
+      }
+
+      /* Ensure CTA remains legible atop dark overlay */
+#hero .btn-arrow-all {
+  display:inline-flex; align-items:center; gap:12px;
+  padding:14px 22px;
+  color:#ffffff !important;
+  background: rgba(255,255,255,0.12); /* light, 70% opaque white look over dark */
+  border:1px solid #ffffff; /* white outline at rest */
+  border-radius:0; /* square edges */
+  text-decoration:none;
+  transition: background-color .2s ease, color .2s ease, transform .15s ease;
+}
+#hero .btn-arrow-all:hover { background:#333333; color:#ffffff !important; }
+#hero .btn-arrow-all svg { fill: currentColor; transition: transform .15s ease; }
+#hero .btn-arrow-all:hover svg { transform: translateX(3px); }
+    </style>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -50,17 +126,17 @@
       <header id="header"></header>
 
       <main>
-        <section id="hero">
-          <div class="container">
+        <section id="hero" role="banner">
+          <div class="hero-img-full-width" aria-hidden="true">
+            <img src="images/hero-img.png" alt="" />
+          </div>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="container-fluid px-0">
             <div class="hero-wrapper">
-              <h1 style="margin-bottom: 1rem;">The modern standard for subsurface data</h1>
-              <h5 style="margin-bottom: 2rem;">
-                Simplify your borehole logging, 
-                lab testing, CPT data, and PDF digitization
-                in one intuitive tool
-              </h5>
-              <a href="#" class="btn-arrow-all"
-                >Activate BoreDM
+              <h1>The modern standard <br />for subsurface data</h1>
+              <h5>Intuitive, professional software for borehole logging, lab testing, CPT data, and PDF digitization.</h5>
+              <a href="#" class="btn-arrow-all" style="color: white;">
+                Get Started
                 <svg
                   width="13"
                   height="13"
@@ -70,22 +146,19 @@
                 >
                   <path
                     d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                    fill="white"
+                    fill="#fff"
                   />
                 </svg>
               </a>
             </div>
           </div>
-          <div class="hero-img-full-width">
-            <img src="images/hero-img.png" alt="hero-img" />
-          </div>
         </section>
 
         <section id="partnerships">
           <div class="container">
-            <h4 class="text-center partnerships-heading" style="display:table; margin:0 auto 30px; border:2px solid #000; padding:8px 12px;">
-  Global leaders trust BoreDM  
-</h4>
+            <h4 class="text-center" style="margin-bottom:30px; padding:16px 20px;">
+              Global leaders trust BoreDM
+            </h4>
             <div class="partnerships-wrapper">
               <div class="tech-slideshow">
                 <div class="mover-1"></div>
@@ -142,9 +215,8 @@
                     <img src="images/astm-laboratory.png" alt="asmt" />
                   </div>
                   <h5>Embedded Lab Integration</h5>
-                  <p>Import ASTM test results directly 
-                    into BoreDM and embed them into your 
-                    logs and reports — no manual entry, no data drift.</p>
+                  <p>Enter ASTM results straight into BoreDM — one platform, one entry. Data flows to your logs and reports with automatic QC, no re-entry or drift.
+</p>
                 </div>
               </div>
             </div>
@@ -272,7 +344,7 @@
                           aria-expanded="false"
                           aria-controls="collapseWorksOne"
                         >
-                          <h5>Step 1: Start in the Field</h5>
+                          <h5>Step 1: Pre-Launch Setup</h5>
                         </button>
                         <div
                           id="collapseWorksOne"
@@ -281,8 +353,7 @@
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
-                            Log borings and samples in the mobile app, 
-                            or upload gINT, AGS, and DIGGS files directly.
+                            We meet with your team to create your BoreDM environment, configuring templates, permissions, integrations, and more.
                           </div>
                         </div>
                       </div>
@@ -295,7 +366,7 @@
                           aria-expanded="false"
                           aria-controls="collapseWorksTwo"
                         >
-                          <h5>Step 2: Validate Your Data</h5>
+                          <h5>Step 2: Training & Pilot</h5>
                         </button>
                         <div
                           id="collapseWorksTwo"
@@ -304,8 +375,7 @@
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
-                            Run ASTM calculations, flag data issues instantly, 
-                            and standardize your test results.
+                            Our deployment specialists onboard your core team through live and recorded sessions, in-app guides, and pilot projects.
                           </div>
                         </div>
                       </div>
@@ -318,7 +388,7 @@
                           aria-expanded="false"
                           aria-controls="collapseWorksThree"
                         >
-                          <h5>Step 3: Deliver with Confidence</h5>
+                          <h5>Step 3: Full Adoption & Optimization</h5>
                         </button>
                         <div
                           id="collapseWorksThree"
@@ -327,8 +397,7 @@
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
-                            Turn your data into clear, 
-                            professional reports — easy to share or export in DWG, GIS, and PDF
+                            Launch BoreDM organization-wide and keep improving with continuous training, support, and customization at no extra cost.
                           </div>
                         </div>
                       </div>
