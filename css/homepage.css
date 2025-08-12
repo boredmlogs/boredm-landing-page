@@ -44,27 +44,32 @@
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 }
-/* New scrolling track for individual images */
+
+/* Single long image marquee scroll */
 .tech-slideshow-track {
   display: flex;
   align-items: center;
   height: 60px;
-  gap: 40px;
-  animation: moveSlideshow 15s linear infinite;
+  gap: 0;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 30s linear infinite;
 }
-.tech-slideshow-track img {
+
+.tech-slideshow-track .marquee-img {
   height: 60px;
   width: auto;
-  object-fit: contain;
+  min-width: 100vw;
+  object-fit: cover;
   display: block;
+  flex: 0 0 auto;
 }
-@keyframes moveSlideshow {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 #financial_solutions {
@@ -275,10 +280,9 @@
   }
   .tech-slideshow-track {
     height: 45px;
-    gap: 24px;
-    animation: moveSlideshow 40s linear infinite;
+    animation: marquee 20s linear infinite;
   }
-  .tech-slideshow-track img {
+  .tech-slideshow-track .marquee-img {
     height: 45px;
   }
   .slick-slide img {
