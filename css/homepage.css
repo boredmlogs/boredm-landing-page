@@ -149,7 +149,7 @@
 }
 .about-img {
   /* the wrapper div */
-  max-width: 420px; /* cap desktop width – change to taste */
+  /* max-width removed to allow larger images */
   width: 100%;
   background: #fff;
 }
