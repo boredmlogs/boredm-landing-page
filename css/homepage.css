@@ -42,20 +42,23 @@
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 }
-.tech-slideshow > div {
+/* New scrolling track for individual images */
+.tech-slideshow-track {
+  display: flex;
+  align-items: center;
   height: 60px;
-  width: 4150px;
-  background: url(../images/parthership-slide-1.svg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 40s linear infinite;
+  gap: 40px;
+  animation: moveSlideshow 15s linear infinite;
+}
+.tech-slideshow-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 @keyframes moveSlideshow {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
@@ -251,12 +254,13 @@
   .tech-slideshow {
     height: 45px;
   }
-  .tech-slideshow > div {
+  .tech-slideshow-track {
     height: 45px;
-    background: url(../images/parthership-slide-1-mobile.svg);
-    width: 2932px;
-    background-size: auto 100%;
+    gap: 24px;
     animation: moveSlideshow 40s linear infinite;
+  }
+  .tech-slideshow-track img {
+    height: 45px;
   }
   .slick-slide img {
     aspect-ratio: 16 / 9;
