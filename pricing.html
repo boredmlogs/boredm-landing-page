@@ -1,619 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BoreDM</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;800&family=Poppins:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/pricing.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="fl-page">
-      <header id="header"></header>
 
-      <main>
-        <section id="pricing" class="first-section section-padding-all">
-          <div class="container">
-            <div
-              class="section-heading-wrapper-all text-center pricing-heading"
-            >
-              <h4 class="small-heading">Pricing</h4>
-              <h1>Logs Tier</h1>
-            </div>
-            <div class="pricing-wrapper-parent">
-              <div class="pricing-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper__left">
-                      <h3>Logs</h3>
-                      <p>
-                        For teams efficiently generating quality logs and cross
-                        sections
-                      </p>
-                      <div class="pricing-info">
-                        <h5>$58</h5>
-                        <p>Per user/month, billed annually</p>
-                        <p></p>
-                        <a class="btn-arrow-all btn-arrow-all-black" href="#"
-                          >Start free trial
-                          <svg
-                            width="13"
-                            height="13"
-                            viewBox="0 0 13 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_14726_7045)">
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_14726_7045">
-                                <rect
-                                  width="13"
-                                  height="12"
-                                  fill="white"
-                                  transform="matrix(-1 0 0 1 13 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoreDM</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;800&family=Poppins:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="fl-page">
+    <header id="header"></header>
+
+    <main>
+      <section id="pricing" class="first-section section-padding-all">
+        <div class="container">
+          <div class="section-heading-wrapper-all text-center pricing-heading">
+            <h4 class="small-heading">Pricing</h4>
+            <h1>Logs Tier</h1>
+          </div>
+          <div class="pricing-wrapper-parent">
+            <div class="pricing-wrapper">
+              <div class="pricing-wrapper-child">
+                <div>
+                  <h3>Logs</h3>
+                  <p>
+                    For teams efficiently generating quality logs and cross
+                    sections
+                  </p>
+                  <div class="pricing-info">
+                    <div>
+                      <h5>$58</h5>
+                      <p>Per user/month, billed annually</p>
+                      <div class="check-mark-bullets">
+                        <ul>
+                          <li>
+                            Unlimited custom log templates and data entry settings
+                            (soil borings, rock cores, monitoring wells, test
+                            pits, DCPs)
+                          </li>
+                          <li>
+                            PDF and DXF cross sections, Report-ready site plans,
+                            GIS map of all borings
+                          </li>
+                          <li>
+                            Lab testing results on logs, Automated quality checks
+                          </li>
+                          <li>
+                            Comprehensive role-based permissions for team
+                            management
+                          </li>
+                          <li>BoreDM Field: iOS/Android field collection app</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper-right">
-                      <ul>
-                        <li>
-                          Unlimited custom log templates and data entry settings
-                          (soil borings, rock cores, monitoring wells, test
-                          pits, DCPs)
-                        </li>
-                        <li>
-                          PDF and DXF cross sections, Report-ready site plans,
-                          GIS map of all borings
-                        </li>
-                        <li>
-                          Lab testing results on logs, Automated quality checks
-                        </li>
-                        <li>
-                          Comprehensive role-based permissions for team
-                          management
-                        </li>
-                        <li>BoreDM Field: iOS/Android field collection app</li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
+                <a class="pricing-button btn-arrow-all btn-arrow-all-black" href="#">Start free trial
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14726_7045)">
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_14726_7045">
+                        <rect width="13" height="12" fill="white" transform="matrix(-1 0 0 1 13 0.5)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </div>
-              <div class="pricing-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper__left">
-                      <h3>Logs Pro</h3>
-                      <p>
-                       For comprehensive geotechnical workflows
-                      </p>
-                      <div class="pricing-info">
-                        <h5>$83</h5>
-                        <p>Per user/month, billed annually</p>
-                        <a class="btn-arrow-all btn-arrow-all-black" href="#"
-                          >Start free trial
-                          <svg
-                            width="13"
-                            height="13"
-                            viewBox="0 0 13 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_14726_7045)">
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_14726_7045">
-                                <rect
-                                  width="13"
-                                  height="12"
-                                  fill="white"
-                                  transform="matrix(-1 0 0 1 13 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
+              <div class="pricing-wrapper-child">
+                <div>
+                  <h3>Logs Pro</h3>
+                  <p>
+                    For comprehensive geotechnical workflows
+                  </p>
+                  <div class="pricing-info">
+                    <div>
+                      <h5>$83</h5>
+                      <p>Per user/month, billed annually</p>
+                      <div class="check-mark-bullets">
+                        <ul>
+                          <li>
+                            All features from Logs
+                          </li>
+                          <li>
+                            3D visualizations, CPT correlations and reports, Autodesk Civil 3D direct integration
+                          </li>
+                          <li>
+                            BoreDM Analysis: custom database querying, visualization, and exports
+                          </li>
+                          <li>
+                            Access to AI tools for historical data upload
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper-right">
-                     <!-- <p>
-                        For growing businesses and individuals needing more
-                        advanced features.
-                      </p> -->
-                      <ul>
-                        <li>
-                         All features from Logs
-                        </li>
-                        <li>
-                          3D visualizations, CPT correlations and reports, Autodesk Civil 3D direct integration
-                        </li>
-                        <li>
-                          BoreDM Analysis: custom database querying, visualization, and exports
-                        </li>
-                        <li>
-                          Access to AI tools for historical data upload                        
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
+                <a class="pricing-button btn-arrow-all btn-arrow-all-black" href="#">Start free trial
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14726_7045)">
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_14726_7045">
+                        <rect width="13" height="12" fill="white" transform="matrix(-1 0 0 1 13 0.5)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </div>
-              <!--
-              <div class="pricing-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper__left">
-                      <h3>Enterprise</h3>
-                      <p>
-                        For large organizations
-                      </p>
-                      <div class="pricing-info">
-                        <h5>Contact Us</h5>
-                        <p>Per User/Year</p>
-                        <a class="btn-arrow-all btn-arrow-all-black" href="#"
-                          >Start free trial
-                          <svg
-                            width="13"
-                            height="13"
-                            viewBox="0 0 13 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_14726_7045)">
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_14726_7045">
-                                <rect
-                                  width="13"
-                                  height="12"
-                                  fill="white"
-                                  transform="matrix(-1 0 0 1 13 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper-right">
-                      <p>
-                        For growing businesses and individuals needing more
-                        advanced features.
-                      </p>
-                      <ul>
-                        <li>
-                          Dedicated support
-                        </li>
-                        <li>
-                          Single Sign-On (SSO)
-                        </li>
-                        <li>
-                          Custom Invoicing
-                        </li>
-                        <li>
-                          Curated onboarding and training
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Labs Tier section-->
+      <!--Labs Tier section-->
+      <div class="section-heading-wrapper-all text-center pricing-heading">
+        <h4 class="small-heading">Pricing</h4>
+        <h1>Labs Tier</h1>
+      </div>
+      <div class="pricing-wrapper-parent">
         <section id="labs-pricing" class="first-section section-padding-all labs-fix">
           <div class="container">
-            <div class="section-heading-wrapper-all text-center pricing-heading">
-              <h4 class="small-heading">Pricing</h4>
-              <h1>Labs Tier</h1>
+            <div class="pricing-wrapper">
+              <div class="pricing-wrapper-child">
+                <div>
+                  <h3>Lab</h3>
+                  <p>
+                    Our comprehensive laboratory module for index testing with trackable lab assignments, equipment
+                    management, calibrations, and verifications
+                  </p>
+                  <div class="pricing-info">
+                    <div>
+                      <h5>$42</h5>
+                      <p>Per user/month, billed annually</p>
+                      <div class="check-mark-bullets">
+                        <ul>
+                          <li>
+                            Modern and efficient lab data entry, auto-fill into reports and logs
+                          </li>
+                          <li>
+                            Digital test assignment sheets
+                          </li>
+                          <li>
+                            Lab testing results on logs, Automated quality checks
+                          </li>
+                          <li>
+                            Automated ASTM-based quality checks
+                          </li>
+                          <li>Audit trail for each lab sample
+                          </li>
+                          <li>Role-based permissions for laboratory teams
+                          </li>
+                          <li>Equipment management (calibrations and verifications; document storage)
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="pricing-button btn-arrow-all btn-arrow-all-black" href="#">Start free trial
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14726_7045)">
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_14726_7045">
+                        <rect width="13" height="12" fill="white" transform="matrix(-1 0 0 1 13 0.5)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+              <div class="pricing-wrapper-child">
+                <div>
+                  <h3>Lab Pro</h3>
+                  <p>
+                    Our enhanced laboratory module for all lab testing, equipment tracking, calibrations,
+                    verifications, and lab assignments
+                  </p>
+                  <div class="pricing-info">
+                    <div>
+                      <h5>$58</h5>
+                      <p>Per user/month, billed annually</p>
+                      <div class="check-mark-bullets">
+                        <ul>
+                          <li>
+                            All features from Lab
+                          </li>
+                          <li>
+                            Over 20 advanced ASTM laboratory tests (inquire for complete test list) </li>
+                          <li>
+                            BoreDM Analysis: custom database querying, visualization, and exports
+                          </li>
+                          <li>
+                            Access to all new tests as they become available throughout Spring and Summer 2025
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="pricing-button btn-arrow-all btn-arrow-all-black" href="#">Start free trial
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14726_7045)">
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                      <path
+                        d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
+                        fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_14726_7045">
+                        <rect width="13" height="12" fill="white" transform="matrix(-1 0 0 1 13 0.5)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="pricing-wrapper-parent">
-              <div class="pricing-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper__left">
-                      <h3>Lab</h3>
-                      <p>
-                        Our comprehensive laboratory module for index testing with trackable lab assignments, equipment management, calibrations, and verifications
-                      </p>
-                      <div class="pricing-info">
-                        <h5>$42</h5>
-                        <p>Per user/month, billed annually</p>
-                        <p></p>
-                        <a class="btn-arrow-all btn-arrow-all-black" href="#"
-                          >Start free trial
-                          <svg
-                            width="13"
-                            height="13"
-                            viewBox="0 0 13 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_14726_7045)">
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_14726_7045">
-                                <rect
-                                  width="13"
-                                  height="12"
-                                  fill="white"
-                                  transform="matrix(-1 0 0 1 13 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper-right">
-                      <ul>
-                        <li>
-                          Modern and efficient lab data entry, auto-fill into reports and logs
-                        </li>
-                        <li>
-                          Digital test assignment sheets
-                        </li>
-                        <li>
-                          Lab testing results on logs, Automated quality checks
-                        </li>
-                        <li>
-                          Automated ASTM-based quality checks
-                        </li>
-                        <li>Audit trail for each lab sample
-                        </li>
-                        <li>Role-based permissions for laboratory teams
-                        </li>
-                        <li>Equipment management (calibrations and verifications; document storage)
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pricing-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper__left">
-                      <h3>Lab Pro</h3>
-                      <p>
-                        Our enhanced laboratory module for all lab testing, equipment tracking, calibrations, verifications, and lab assignments                      </p>
-                      <div class="pricing-info">
-                        <h5>$58</h5>
-                        <p>Per user/month, billed annually</p>
-                        <a class="btn-arrow-all btn-arrow-all-black" href="#"
-                          >Start free trial
-                          <svg
-                            width="13"
-                            height="13"
-                            viewBox="0 0 13 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_14726_7045)">
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_14726_7045">
-                                <rect
-                                  width="13"
-                                  height="12"
-                                  fill="white"
-                                  transform="matrix(-1 0 0 1 13 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="pricing-wrapper-right">
-                     <!-- <p>
-                        For growing businesses and individuals needing more
-                        advanced features.
-                      </p> -->
-                      <ul>
-                        <li>
-                         All features from Lab Pro
-                        </li>
-                        <li>
-                          Over 20 advanced ASTM laboratory tests (inquire for complete test list)                        </li>
-                        <li>
-                          BoreDM Analysis: custom database querying, visualization, and exports
-                        </li>
-                        <li>
-                          Access to all new tests as they become available throughout Spring and Summer 2025                      
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </section>
 
-        <section id="benefits" class="section-padding-all">
-          <div class="container">
-            <div class="section-heading-wrapper-all text-center">
-              <h4 class="small-heading">Features</h4>
-              <h2>Enterprise Plan</h2>
+          </div>
+        </section>
+      </div>
+
+      <section id="benefits" class="section-padding-all">
+        <div class="container">
+          <div class="section-heading-wrapper-all text-center">
+            <h4 class="small-heading">Features</h4>
+            <h2>Enterprise Plan</h2>
+          </div>
+          <div class="row row-40">
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-1.svg" alt="transactions" />
+                </div>
+                <div class="how-it-works-single__text">
+                  <h6>Dedicated Account Manager</h6>
+                  <p>
+                    Your single point of contact for strategic guidance, escalations, and ongoing success.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="row row-40">
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-1.svg"
-                      alt="transactions"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>Dedicated Account Manager</h6>
-                    <p>
-                      Your single point of contact for strategic guidance, escalations, and ongoing success.
-                    </p>
-                  </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-2.svg" alt="multi-account" />
+                </div>
+                <div class="how-it-works-single__text">
+                  <h6>Single Sign-On (SAML/SSO)</h6>
+                  <p>
+                    Seamless integration with your corporate identity provider for secure, one-click access.
+                  </p>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-2.svg"
-                      alt="multi-account"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>Single Sign-On (SAML/SSO)</h6>
-                    <p>
-                      Seamless integration with your corporate identity provider for secure, one-click access.
-                    </p>
-                  </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-3.svg" alt="mobile app" />
+                </div>
+                <div class="how-it-works-single__text">
+                  <h6>Curated Onboarding & Training</h6>
+                  <p>
+                    Tailored workshops, documentation, and best-practice guidance to get your team up to speed fast.
+                  </p>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-3.svg"
-                      alt="mobile app"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>Curated Onboarding & Training</h6>
-                    <p>
-                      Tailored workshops, documentation, and best-practice guidance to get your team up to speed fast.
-                    </p>
-                  </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-4.svg" alt="customizable alerts" />
+                </div>
+                <div class="how-it-works-single__text">
+                  <h6>Custom Invoicing & Billing</h6>
+                  <p>
+                    Flexible payment terms, consolidated invoices, and purchase-order support tailored to your needs.
+                  </p>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-4.svg"
-                      alt="customizable alerts"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>Custom Invoicing & Billing</h6>
-                    <p>
-                      Flexible payment terms, consolidated invoices, and purchase-order support tailored to your needs.
-                    </p>
-                  </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-5.svg" alt="customizable alerts" />
+                </div>
+                <div class="how-it-works-single__text">
+                  <h6>API Access & Custom Integrations</h6>
+                  <p>
+                    Full API access plus bespoke integration and data-migration services to fit your workflows.
+                  </p>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-5.svg"
-                      alt="customizable alerts"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>API Access & Custom Integrations</h6>
-                    <p>
-                      Full API access plus bespoke integration and data-migration services to fit your workflows.
-                    </p>
-                  </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-single-flex">
+                <div class="how-it-works-single__icon">
+                  <img src="images/icons/benefits-icon-6.svg" alt="payments" />
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="how-it-works-single-flex">
-                  <div class="how-it-works-single__icon">
-                    <img
-                      src="images/icons/benefits-icon-6.svg"
-                      alt="payments"
-                    />
-                  </div>
-                  <div class="how-it-works-single__text">
-                    <h6>Advanced Security & Compliance</h6>
-                    <p>
-                      SOC 2-certified infrastructure, custom data retention, and audit logs.
-                    </p>
-                  </div>
+                <div class="how-it-works-single__text">
+                  <h6>Advanced Security & Compliance</h6>
+                  <p>
+                    SOC 2-certified infrastructure, custom data retention, and audit logs.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="faq">
-          <div class="container">
-            <h4 class="small-heading">FAQ</h4>
-            <h2>Frequently asked questions</h2>
-            <div class="faq-wrapper">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="false"
-                    aria-controls="collapseOne"
-                  >
-                    <h5>
-                      Why price per user rather than per log/usage?
-                    </h5>
-                  </button>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      <li>Predictability: Annual per-user pricing gives firms budget certainty without needing to itemize per-project software costs.
-                      </li>
-                      <li>Value Delivery: BoreDM delivers long-term value by turning boring log data into a structured, searchable asset for your firm.
-                      </li>
-                      <li>Positive Incentives: Unlimited usage ensures engineers use the platform fully, without resorting to inefficient workarounds.
-                      </li>
-                      <li>Cost: Charging per log is unjustifiable—storage is dirt cheap; only photo storage merits extra cost</li>
-                    </div>
+      <section id="faq">
+        <div class="container">
+          <h4 class="small-heading">FAQ</h4>
+          <h2>Frequently asked questions</h2>
+          <div class="faq-wrapper">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <h5>
+                    Why price per user rather than per log/usage?
+                  </h5>
+                </button>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <li>Predictability: Annual per-user pricing gives firms budget certainty without needing to
+                      itemize
+                      per-project software costs.
+                    </li>
+                    <li>Value Delivery: BoreDM delivers long-term value by turning boring log data into a structured,
+                      searchable asset for your firm.
+                    </li>
+                    <li>Positive Incentives: Unlimited usage ensures engineers use the platform fully, without
+                      resorting
+                      to inefficient workarounds.
+                    </li>
+                    <li>Cost: Charging per log is unjustifiable—storage is dirt cheap; only photo storage merits extra
+                      cost</li>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    <h5>Why named user licensing rather than network/pooled/concurrent user licensing?</h5>
-                  </button>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                     We’re not just a software company—we’re a data management company. While our UI saves users significant time (often 75% faster than gINT), the long-term value lies in how we structure and manage data.
-                     Concurrent licensing makes sense when all value comes from time spent in-app, like CAD design. But viewing a map may take five minutes—even though that insight depends on years of good data management.
-                     Lastly, we never want to block engineers from doing their jobs just because all seats are taken—especially during busy times.
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <h5>Why named user licensing rather than network/pooled/concurrent user licensing?</h5>
+                </button>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    We’re not just a software company—we’re a data management company. While our UI saves users
+                    significant time (often 75% faster than gINT), the long-term value lies in how we structure and
+                    manage data.
+                    Concurrent licensing makes sense when all value comes from time spent in-app, like CAD design. But
+                    viewing a map may take five minutes—even though that insight depends on years of good data
+                    management.
+                    Lastly, we never want to block engineers from doing their jobs just because all seats are
+                    taken—especially during busy times.
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    <h5>Do you offer other pricing models?</h5>
-                  </button>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      We’re software developers, which means we’re used to quickly testing new things, iterating, and improving. 
-                      Our goal is for BoreDM to help as many engineers as possible. 
-                      If you have any feedback, or if something would make BoreDM a better fit for your business, 
-                      let us know and we’ll explore another approach with your team. We learn from our users every day.
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <h5>Do you offer other pricing models?</h5>
+                </button>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    We’re software developers, which means we’re used to quickly testing new things, iterating, and
+                    improving.
+                    Our goal is for BoreDM to help as many engineers as possible.
+                    If you have any feedback, or if something would make BoreDM a better fit for your business,
+                    let us know and we’ll explore another approach with your team. We learn from our users every day.
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="false"
-                    aria-controls="collapseFour"
-                  >
-                    <h5>Do you offer the option to pay monthly?</h5>
-                  </button>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="accordion-body">
-                      We do, but paying annually comes with a 17% discount!
-                    </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <h5>Do you offer the option to pay monthly?</h5>
+                </button>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    We do, but paying annually comes with a 17% discount!
                   </div>
                 </div>
-               <!-- <div class="accordion-item">
+              </div>
+              <!-- <div class="accordion-item">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -660,23 +467,24 @@
                     </div>
                   </div>
                 </div>-->
-              </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer id="footer"></footer>
-    </div>
+    <footer id="footer"></footer>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
-    <script>
-      $("#header").load("includes/header.html");
-      $("#footer").load("includes/footer.html");
-    </script>
-  </body>
+  <script>
+    $("#header").load("includes/header.html");
+    $("#footer").load("includes/footer.html");
+  </script>
+</body>
+
 </html>
