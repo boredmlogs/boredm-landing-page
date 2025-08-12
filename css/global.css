@@ -229,9 +229,31 @@
 }
 
 .pricing-wrapper {
-  padding: 40px;
+  padding: 20px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+@media (orientation: landscape) {
+  .pricing-wrapper {
+    flex-direction: row;
+  }
+
+  .pricing-wrapper-child {
+    width: 49%;
+  }
+}
+
+@media (orientation: portrait) {
+  .pricing-wrapper {
+    flex-direction: column;
+  }
+
+  .pricing-wrapper-child {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .pricing-wrapper>p {
@@ -563,12 +585,7 @@
     margin: 0 auto 30px;
   }
 
-  .pricing-wrapper {
-    padding: 20px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-  }
+
 
   .pricing-info a {
     margin-top: 20px;
