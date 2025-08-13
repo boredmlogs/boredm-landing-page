@@ -223,7 +223,11 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 36px;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.view-more-wrapper {
+  border-radius: 10px;
 }
 
 .pricing-button {
@@ -632,5 +636,9 @@
 }
 
 img:not(.logo) {
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.testimonials-info {
+  border-radius: 10px;
 }
