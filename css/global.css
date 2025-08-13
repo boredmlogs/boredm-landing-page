@@ -632,3 +632,7 @@
     margin-top: 0px;
   }
 }
+
+img {
+  border-radius: 15px;
+}
