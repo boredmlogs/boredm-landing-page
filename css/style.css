@@ -46,6 +46,14 @@ h6 {
   font-weight: 400;
 }
 
+.hero-wrapper h1 {
+  color: var(--lightBgColor);
+}
+
+.hero-wrapper h5 {
+  color: var(--lightBgColor);
+}
+
 h6 {
   font-weight: 500;
 }
