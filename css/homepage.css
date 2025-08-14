@@ -1,3 +1,21 @@
+/* Make testimonial boxes wider */
+.testimonials-slider__single .row {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials-slider__single {
+  width: 100%;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Make testimonial role/company text smaller */
+.testimonial-role {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
 #hero {
   padding-top: 193px;
   background-color: var(--lightBgColor);
