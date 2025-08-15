@@ -4,25 +4,30 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .testimonials-slider__single {
   width: 100%;
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Make testimonial role/company text smaller */
 .testimonial-role {
   font-size: 0.95rem;
   opacity: 0.8;
   margin-bottom: 2px;
 }
+
 #hero {
   padding-top: 193px;
   background-color: var(--lightBgColor);
 }
+
 .hero-img-full-width img {
   width: 100%;
 }
+
 .hero-wrapper {
   max-width: 892px;
   margin: 0 auto;
@@ -31,6 +36,7 @@
   padding-left: 24px;
   padding-right: 24px;
 }
+
 .hero-wrapper h1 {
   max-width: 730px;
   margin: 0 auto;
@@ -39,6 +45,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
+
 .hero-wrapper p {
   margin: 15px 0 30px;
 }
@@ -46,6 +53,7 @@
 #partnerships {
   background: #fff;
 }
+
 #partnerships h5 {
   text-align: center;
   margin-bottom: 40px;
@@ -54,6 +62,7 @@
 #partnerships .container {
   max-width: 1462px;
 }
+
 .tech-slideshow {
   height: 60px;
   max-width: 100%;
@@ -86,17 +95,24 @@
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 #financial_solutions {
   padding-bottom: 150px;
 }
+
 #financial_solutions .container {
   max-width: 1440px;
   padding: 0;
 }
+
 .financial-solutions-header p {
   max-width: 530px;
   margin: 20px auto 50px;
@@ -113,22 +129,26 @@
   min-height: 508px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
+
 .financial-solution-single h6 {
   color: #fff;
   display: inline-flex;
   width: max-content;
-  padding: 6px 20px 5px;
+  padding: 6px 5px;
   border-radius: 50px;
 }
+
 .financial-solution-single p {
   margin-top: auto;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 32px;
 }
+
 .financial-solution-single h3 {
   color: #fff;
-  font-size: 46px;
+  font-size: 30px;
   margin-bottom: 0;
   font-family: "Poppins", sans-serif;
 }
@@ -142,39 +162,48 @@
   margin-top: 20px;
   padding: 30px 20px;
 }
+
 .view-more-wrapper .separator {
   background: #5d5d5d;
   width: 1px;
   height: 26px;
 }
+
 .view-more-wrapper a {
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--primaryColor);
 }
+
 .view-more-wrapper a:hover {
   color: var(--primaryColor);
 }
+
 .view-more-wrapper a img {
   transition: all 0.2s ease;
 }
+
 .view-more-wrapper a:hover img {
   transform: translateX(3px);
 }
 
 #about_us {
-  padding: 150px 0 100px;
+  padding: 150px 0 150px;
 }
+
 .about-header h2 {
   max-width: 891px;
 }
+
 .about-text {
   padding-top: 80px;
 }
+
 .about-text a {
   margin-top: 55px;
 }
+
 .about-img {
   /* the wrapper div */
   /* max-width removed to allow larger images */
@@ -183,16 +212,21 @@
 }
 
 .about-img img {
-  width: 100%; /* scale responsively */
-  height: auto; /* keep aspect ratio */
-  display: block; /* remove default inline gap */
-  object-fit: contain; /* no cropping; use 'cover' if you want a zoom-fill */
+  width: 100%;
+  /* scale responsively */
+  height: auto;
+  /* keep aspect ratio */
+  display: block;
+  /* remove default inline gap */
+  object-fit: contain;
+  /* no cropping; use 'cover' if you want a zoom-fill */
 }
 
 #how_it_works_section {
   background: var(--lightBgColor);
   padding: 150px 0;
 }
+
 .how-it-works-img {
   background: transparent;
   padding: 0;
@@ -200,6 +234,7 @@
   width: 100%;
   display: block;
 }
+
 .how-it-works-img img {
   display: block;
   width: 100%;
@@ -211,7 +246,8 @@
 #how_it_works_section .how-it-works-img img {
   max-width: 100% !important;
   width: 100% !important;
-  height: auto !important;  /* keep aspect ratio */
+  height: auto !important;
+  /* keep aspect ratio */
 }
 
 /* Remove padding on image column so image can use full grid width on desktop */
@@ -219,141 +255,181 @@
   padding-left: 0;
   padding-right: 0;
 }
+
 .how-it-works-steps-wrapper {
   max-width: 613px;
   margin-top: 60px;
 }
+
 .how-it-works-steps-wrapper .accordion-item {
   background: transparent;
   padding: 20px 0;
 }
+
 .how-it-works-steps-wrapper .accordion-item:first-of-type {
   border-top: 1px solid #d9d9d9;
 }
+
 .how-it-works-steps-wrapper .accordion-button::after {
   background-image: url(../images/icons/chev-right.svg);
 }
+
 .how-it-works-steps-wrapper .accordion-button:not(.collapsed)::after {
   background-image: url(../images/icons/faq-chev-down.svg) !important;
   transform: rotate(0deg) !important;
 }
+
 @media (max-width: 1440px) {
+
   .financial-slider-wrapper::before,
   .financial-slider-wrapper::after {
     display: none;
   }
+
   .partnerships-wrapper {
     margin: 0 -20px;
   }
 }
+
 @media (max-width: 1024px) {
   #hero {
     padding-top: 150px;
   }
+
   .hero-wrapper h1 {
     font-size: 46px;
   }
+
   #partnerships {
     padding: 80px 0;
   }
+
   .financial-solution-single {
     min-height: 400px;
   }
+
   .financial-solution-single h3 {
     font-size: 36px;
   }
+
   #financial_solutions {
     padding-bottom: 90px;
   }
+
   #about_us {
-    padding: 90px 0;
+    padding: 90px 90px;
   }
+
   #how_it_works_section {
     padding: 90px 0;
   }
 }
+
 @media (max-width: 767px) {
   .hero-wrapper {
     padding-left: 16px;
     padding-right: 16px;
     text-align: center;
   }
+
   .hero-wrapper h1,
   .hero-wrapper h5 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
+
   .hero-wrapper {
     padding: 0 20px;
   }
+
   .hero-wrapper h1 {
     max-width: 100%;
   }
+
   .how-it-works-steps-wrapper .accordion-item {
     padding: 10px 0;
   }
+
   .tech-slideshow {
     height: 45px;
   }
+
   .tech-slideshow-track {
     height: 45px;
     animation: marquee 20s linear infinite;
   }
+
   .tech-slideshow-track .marquee-img {
     height: 45px;
   }
+
   .slick-slide img {
     aspect-ratio: 16 / 9;
   }
+
   .slider-2 {
     margin-top: 0px;
   }
+
   #hero {
     padding-top: 130px;
   }
+
   .hero-wrapper h1 {
     font-size: 36px;
   }
+
   .hero-wrapper p {
     margin: 15px 0 20px;
   }
+
   #partnerships {
     padding: 45px 0;
   }
+
   #partnerships h5 {
     margin-bottom: 20px;
   }
+
   .slick-slide {
     text-align: center;
     margin: 0 10px;
   }
+
   #financial_solutions {
     padding-bottom: 50px;
   }
+
   .financial-solutions-header {
     padding: 0 20px;
   }
+
   .financial-solutions-header p {
     margin: 15px auto 30px;
   }
+
   .financial-solution-single {
     padding: 20px;
   }
+
   .financial-solution-single h6 {
     font-size: 14px;
   }
 
   #about_us {
-    padding: 50px 0 30px;
+    padding: 50px 0 50px;
   }
+
   .about-text {
     padding-top: 10px;
   }
+
   .about-text a {
     margin-top: 20px;
     margin-bottom: 10px;
   }
+
   #how_it_works_section {
     padding: 50px 0;
   }
@@ -362,6 +438,7 @@
     width: 100%;
   }
 }
+
 @media (min-width: 550px) and (max-width: 767px) {
   #features .col-md-4 {
     width: 50%;
