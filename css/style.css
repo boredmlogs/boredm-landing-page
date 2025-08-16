@@ -790,6 +790,5 @@ ul {
 }
 
 #how_it_works_section .how-it-works-steps-wrapper {
-  margin-top: 30px;
-  /* reduce from the default 60px */
+  margin-top: 60px;
 }
