@@ -668,6 +668,10 @@ https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-
   gap: 64px;
 }
 
+.logo-carousel-first {
+  margin-left: 64px;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
