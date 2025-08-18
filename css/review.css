@@ -2,12 +2,15 @@
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
+
 .testimonials-slider__single .row {
   margin: 0 -10px !important;
 }
+
 #review {
   padding-bottom: 150px;
 }
+
 .row-40 {
   row-gap: 40px !important;
 }
@@ -17,11 +20,13 @@
     padding-bottom: 60px;
   }
 }
+
 @media (max-width: 767px) {
   #review {
     padding-bottom: 30px;
   }
 }
-#review img {
-  border-radius: 0 !important;
+
+.testimonials-page-img {
+  height: 100%;
 }

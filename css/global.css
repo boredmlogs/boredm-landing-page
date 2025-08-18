@@ -211,7 +211,6 @@
 }
 
 .pricing-header h2 {
-  max-width: 582px;
   margin: 0 auto 50px;
 }
 
@@ -235,7 +234,6 @@
 }
 
 .pricing-wrapper {
-  padding: 20px;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
@@ -492,10 +490,6 @@
     margin-bottom: 20px;
   }
 
-  .testimonials-info {
-    margin-top: 10px;
-  }
-
   .testimonials-wrapper {
     padding: 0 20px;
   }
@@ -674,6 +668,10 @@ https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-
   gap: 64px;
 }
 
+.logo-carousel-first {
+  margin-left: 64px;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -682,4 +680,12 @@ https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-
   100% {
     transform: translateX(-50%);
   }
+}
+
+.mt150 {
+  margin-top: 150px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
 }
