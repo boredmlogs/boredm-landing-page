@@ -454,6 +454,18 @@
   }
 }
 
+@media (orientation: portrait) {
+  .hero-wrapper {
+    text-align: left !important;
+  }
+  .hero-wrapper h1,
+  .hero-wrapper h5 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 #hero .btn-arrow-all svg {
   fill: #fff !important;
 }
