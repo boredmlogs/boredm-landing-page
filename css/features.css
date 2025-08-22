@@ -15,6 +15,25 @@
   padding: 150px 0 100px;
 }
 
+.features-col-single__img,
+.features-col-single-content {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.features-col-single-content {
+  /* Ensures text is left-aligned and matches image width */
+  text-align: left;
+}
+
+.features-col-single h5,
+.features-col-single p {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (max-width: 1024px) {
   #features {
     padding-bottom: 30px !important;
