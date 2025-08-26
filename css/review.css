@@ -30,3 +30,10 @@
 .testimonials-page-img {
   height: 100%;
 }
+
+.testimonials-page-img img {
+  width: 305px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 8px; /* optional: for rounded corners */
+}
