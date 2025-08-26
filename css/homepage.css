@@ -464,6 +464,10 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  #how_it_works_section .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 #hero .btn-arrow-all svg {
