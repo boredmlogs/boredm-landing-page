@@ -469,3 +469,11 @@
 #hero .btn-arrow-all svg {
   fill: #fff !important;
 }
+
+.testimonials-info {
+  text-align: left;
+}
+.testimonials-info img {
+  display: inline-block;
+  margin-left: 0;
+}
