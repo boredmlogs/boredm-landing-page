@@ -105,7 +105,7 @@
 }
 
 #financial_solutions {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 #financial_solutions .container {
@@ -189,7 +189,7 @@
 }
 
 #about_us {
-  padding: 150px 0 150px;
+  padding: 100px 0 100px;
 }
 
 .about-text {
@@ -220,7 +220,7 @@
 
 #how_it_works_section {
   background: var(--lightBgColor);
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .how-it-works-img {
@@ -407,6 +407,7 @@
 
   .financial-solution-single {
     padding: 20px;
+    width: 100%;
   }
 
   .financial-solution-single h6 {
@@ -458,12 +459,14 @@
   .hero-wrapper {
     text-align: left !important;
   }
+
   .hero-wrapper h1,
   .hero-wrapper h5 {
     text-align: left !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
   #how_it_works_section .row {
     display: flex;
     flex-direction: column-reverse;
@@ -477,6 +480,7 @@
 .testimonials-info {
   text-align: left;
 }
+
 .testimonials-info img {
   display: inline-block;
   margin-left: 0;

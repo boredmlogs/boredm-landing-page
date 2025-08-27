@@ -1,6 +1,6 @@
 /* faq */
 #faq {
-  padding: 150px 0;
+  padding: 100px 0 50px;
 }
 
 #faq .container {
@@ -179,7 +179,7 @@
 
 /* features */
 #features {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .features-header p {
@@ -207,7 +207,7 @@
 
 /* pricing */
 #pricing {
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .pricing-header h2 {
@@ -503,7 +503,7 @@
   }
 
   .testimonials-wrapper {
-    padding: 0 20px;
+    padding: 0;
   }
 
   #pricing {
@@ -641,6 +641,12 @@
   }
 }
 
+@media (orientation: portrait) {
+  .testimonials-info {
+    margin-top: 10px;
+  }
+}
+
 img:not(.logo) {
   border-radius: 10px;
 }
@@ -694,10 +700,12 @@ https://stackoverflow.com/questions/31951282/why-is-marquee-deprecated-and-what-
   }
 }
 
-.mt150 {
-  margin-top: 150px;
-}
-
 .mb40 {
   margin-bottom: 40px;
+}
+
+@media (orientation: portrait) {
+  .center-align-mobile {
+    text-align: center;
+  }
 }

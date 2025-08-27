@@ -461,6 +461,10 @@ ul {
   padding: 150px 0;
 }
 
+.section-padding-small {
+  padding: 20px 0;
+}
+
 .section-heading-wrapper-all {
   margin-bottom: 50px;
 }
