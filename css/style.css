@@ -158,6 +158,25 @@ ul {
   fill: #fff;
 }
 
+.btn-secondary {
+  background-color: white;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  padding: 8px 20px;
+  border-radius: 0px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  text-decoration: underline;
+  text-decoration-color: #000;
+  color: #000;
+}
+
 .btn-arrow-all-black {
   color: #fff;
   background: var(--primaryColor);
