@@ -1,21 +1,26 @@
 #who_we_are {
   padding-bottom: 30px;
 }
+
 .who-we-are-text .separator {
   background: #d9d9d9;
   width: 100%;
   height: 1px;
   margin: 40px 0;
 }
+
 .collaborate-text p {
   margin-bottom: 40px;
 }
+
 #achievements {
   padding-bottom: 150px;
 }
+
 .achievements-heading {
   margin-bottom: 50px;
 }
+
 .achievements-single {
   background: var(--lightBgColor);
   border-radius: 0px;
@@ -24,10 +29,12 @@
   display: flex;
   flex-direction: column;
 }
+
 .achievements-single h2 {
   margin-top: auto;
   margin-bottom: 10px;
 }
+
 .achievements-single span {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 50px;
@@ -42,44 +49,56 @@
 .how-it-works-steps-wrapper {
   margin-top: 40px !important;
 }
+
 .how-it-works-img img {
   max-width: 323px !important;
 }
+
 .team-single img {
   border-radius: 0px;
   width: 100%;
 }
+
 .team-single h6 {
   margin: 10px 0 3px;
 }
+
 .financial-left-wrapper {
   background: #f7f9f9;
   border-radius: 0px;
   padding: 80px 60px 0;
 }
+
 .financial-text {
   padding-bottom: 109px;
 }
+
 .financial-img {
   text-align: center;
 }
+
 .financial-text h2 {
   margin-bottom: 30px;
 }
+
 .financial-text p {
   max-width: 500px;
 }
+
 .transforming-crypto-wrapper {
   background: var(--lightBgColor);
   padding: 30px;
   border-radius: 0px;
 }
+
 .transforming-crypto-wrapper h5 {
   margin-bottom: 60px;
 }
+
 .transforming-crypto-wrapper h2 {
   margin-bottom: 0;
 }
+
 .transforming-crypto-logo {
   min-height: 144px;
   margin-top: 20px;
@@ -89,56 +108,72 @@
   justify-content: center;
   border-radius: 0px;
 }
+
 @media (max-width: 1024px) {
   #who_we_are {
     padding-bottom: 80px;
   }
+
   .who-we-are-heading {
     margin-bottom: 40px;
   }
+
   .who-we-are-text .separator {
     margin: 20px 0;
   }
+
   .collaborate-text p {
     margin-bottom: 20px;
   }
+
   .collaborate-img {
     margin-top: 25px;
   }
+
   #achievements {
     padding-bottom: 80px;
   }
+
   .achievements-single {
     min-height: auto;
   }
+
   .achievements-single h2 {
     font-size: 30px;
     margin-top: 30px;
   }
+
   #how_it_works_section {
     padding: 80px 0;
   }
+
   .how-it-works-img img {
     max-width: 180px !important;
   }
+
   .financial-left-wrapper {
     padding: 60px 25px 0;
   }
+
   .transforming-div-wrapper {
     display: flex;
     gap: 30px;
     margin-top: 0px;
   }
-  .transforming-div-wrapper > div {
+
+  .transforming-div-wrapper>div {
     flex-basis: 50%;
     max-width: 50%;
   }
+
   .transforming-crypto-wrapper {
     padding: 20px;
   }
+
   .transforming-crypto-wrapper h5 {
     margin-bottom: 40px;
   }
+
   .transforming-crypto-logo {
     margin-top: 0;
   }
@@ -148,40 +183,52 @@
   .empowering-img img {
     width: 100%;
   }
+
   .how-it-works-steps-wrapper {
     margin-top: 25px !important;
   }
+
   #how_it_works_section {
     padding: 50px 0;
   }
+
   .achievements-single h2 {
     font-size: 28px;
     margin-top: 25px;
   }
+
   #achievements {
     padding-bottom: 50px;
   }
+
   #who_we_are {
     padding-bottom: 50px;
   }
+
   .who-we-are-heading {
     margin-bottom: 25px;
   }
+
   .who-we-are-text {
     margin-top: 25px;
   }
+
   .collaborate-img img {
     width: 100%;
   }
+
   .financial-left-wrapper {
     padding: 20px 20px 0;
   }
+
   .financial-text h2 {
     margin-bottom: 20px;
   }
+
   .financial-text {
     padding-bottom: 25px;
   }
+
   .financial-img {
     text-align: center;
   }
@@ -189,6 +236,7 @@
   .transforming-crypto-wrapper h2 {
     margin-bottom: 5px;
   }
+
   #blog {
     padding-bottom: 30px;
   }
@@ -199,8 +247,24 @@
     flex-direction: column;
     gap: 20px;
   }
-  .transforming-div-wrapper > div {
+
+  .transforming-div-wrapper>div {
     flex-basis: 100%;
     max-width: 100%;
+  }
+}
+
+
+.about-us-image {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 800px) {
+  .about-us-image {
+    float: left;
+    width: calc(320px * 1.6);
+    max-width: 100%;
+    margin: 0 32px 16px 0;
+    border-radius: 12px;
   }
 }
