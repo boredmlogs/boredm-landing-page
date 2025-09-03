@@ -134,8 +134,8 @@
           </div>
         </div>
       </section>
-      <div style="margin-top: 3rem;"></div>
-      <div class="container my-5">
+      <div style="height: 5rem;"></div>
+      <div class="container my-1">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <h2 class="text-center" style="font-size:2rem; line-height:1.3; color:#000000; margin-top:2.5rem; position:relative;">
@@ -213,7 +213,6 @@
         </div>
       </section>
       <section id="about_us">
-  <section id="about_us">
     <div class="container">
       <div class="about-header">
         <div data-w-id="0f9506e8-23d1-c29a-d875-bf1a2ef89b86" class="caption"
@@ -221,11 +220,22 @@
           Connected</div>
         <h2>Ready‑to‑use integrations</h2>
       </div>
-      <div class="row">
+      <style>
+        /* Scope to the about_us section to avoid global side effects */
+        #about_us .about-ready-img {
+          display: block;
+          max-width: 360px;
+          height: auto;
+          margin: 0 auto; /* center horizontally */
+        }
+        /* Reduce extra space that may be coming from default margins */
+        #about_us .about-header h2 { margin-bottom: 0.5rem; }
+        #about_us .about-text p { margin-top: 0.75rem; }
+      </style>
+      <div class="row align-items-center">
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <div class="about-img">
-            <img src="images/builtwpurpose.png" alt="about" class="img-fluid"
-              style="margin-top:45px; width: 550px; max-width:100%;" />
+            <img src="images/readytouse.png" alt="about" class="img-fluid about-ready-img" />
           </div>
         </div>
         <div class="col-12 col-md-6">
