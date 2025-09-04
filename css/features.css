@@ -1,3 +1,27 @@
+.features-col-single-content {
+  margin-left: -40px;
+  padding-right: 40px;
+}
+/* Make all feature images larger and closer together */
+
+
+.features-col-single__img img {
+  width: 600px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.features-col-single {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .features-col-single__img img {
+    width: 100%;
+  }
+}
 #features .col-12:not(:last-of-type) {
   margin-bottom: 50px;
 }
@@ -17,9 +41,21 @@
 
 .features-col-single__img,
 .features-col-single-content {
-  width: 500px;
+  width: 700px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.features-col-single__img img {
+  width: 700px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.features-col-single {
+  margin-bottom: 2rem; /* reduce spacing between features */
 }
 
 .features-col-single-content {
@@ -37,6 +73,12 @@
 @media (max-width: 1024px) {
   #features {
     padding-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-col-single__img img {
+    width: 100%;
   }
 }
 
