@@ -485,3 +485,18 @@
   display: inline-block;
   margin-left: 0;
 }
+
+.logo-carousel[src*="partnership-4-barr.svg"] {
+  width: 150px;
+  height: auto;
+}
+
+.logo-carousel[src*="partnership-13-odot.svg"] {
+  width: 140px;
+  height: auto;
+}
+
+.logo-carousel[src*="partnership-3-ues.svg"] {
+  width: 160px;
+  height: auto;
+}
