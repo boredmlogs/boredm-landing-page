@@ -13,6 +13,15 @@
   padding-bottom: 100px !important;
 }
 
+.benefits-rounded-bg {
+  background: rgb(247,249,249);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 16px 0 rgba(20,23,26,0.04);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 
 @media (max-width: 1024px) {
   #faq {
