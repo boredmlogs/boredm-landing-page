@@ -86,3 +86,12 @@
     padding-bottom: 50px !important;
   }
 }
+
+/* Add to css/features.css or in a <style> block */
+.features-header {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center;
+}
