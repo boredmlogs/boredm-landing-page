@@ -261,3 +261,20 @@ footer {
   margin-top: 0;
   padding-top: 0;
 }
+
+.how-it-works-single__icon img {
+  border-radius: 0 !important;
+}
+
+/* Fix integration page heading overflow on small screens */
+@media (max-width: 576px) {
+  .features-header h2 {
+    font-size: 1.75rem;      /* slightly smaller so it wraps cleanly */
+    line-height: 1.2;
+    overflow-wrap: anywhere; /* allow wrap at spaces/long tokens */
+    word-break: normal;
+    hyphens: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

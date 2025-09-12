@@ -33,6 +33,13 @@
     gap: 20px;
   }
 
+@media (max-width: 576px) {
+  /* Slightly increase gap between heading and Labs cards */
+  .pricing-heading {
+    margin-bottom: 3.5rem !important; /* was 0.5rem */
+  }
+}
+
   #faq {
     padding-bottom: 50px !important;
   }
