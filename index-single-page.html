@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="BoreDM" />
+  <meta property="og:description"
+    content="The modern standard in subsurface data management — intuitive software for borehole logging, geotechnical lab testing, CPT data, and PDF digitization." />
+  <title>BoreDM - The Modern Standard for Subsurface Data</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Base Variables and Reset */
+    :root {
+      --primaryColor: #000000;
+      --textColor: #4a4a4a;
+      --lightBgColor: #f8f8f8;
+      --borderColor: #d1d1d1;
+      --hoverGray: #333333;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--textColor);
+      overflow-x: hidden;
+    }
+
+    .fl-page {
+      overflow: hidden;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primaryColor);
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 38px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-size: 26px;
+      line-height: 1.5;
+    }
+
+    h5 {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    h6 {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    p, li {
+      color: var(--textColor);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      transition: all 0.2s ease;
+      color: var(--primaryColor);
+    }
+
+    a:hover {
+      color: var(--hoverGray);
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    #header {
+      border-bottom: 1px solid var(--borderColor);
+      padding: 13px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      z-index: 999;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-nav__logo img {
+      height: 40px;
+      filter: grayscale(100%);
+    }
+
+    .main-nav__items {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .main-nav__items--menu {
+      display: flex;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .main-nav__items--menu a {
+      font-size: 14px;
+      color: var(--primaryColor);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .main-nav__items--menu a::before {
+      content: "";
+      position: absolute;
+      background: var(--primaryColor);
+      width: 0%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      transition: all 0.2s ease;
+    }
+
+    .main-nav__items--menu a:hover::before,
+    .main-nav__items--menu a.active::before {
+      width: 100%;
+    }
+
+    .main-nav__items--login {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Button Styles */
+    .btn-arrow-all {
+      background-color: transparent;
+      color: var(--primaryColor);
+      padding: 12px 20px;
+      border: 1px solid var(--primaryColor);
+      border-radius: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-arrow-all:hover {
+      background: var(--primaryColor);
+      border-color: var(--primaryColor);
+      color: var(--white);
+    }
+
+    .btn-arrow-all svg path {
+      transition: all 0.2s ease;
+      fill: var(--primaryColor);
+    }
+
+    .btn-arrow-all:hover svg path {
+      fill: var(--white);
+    }
+
+    .btn-arrow-all-black {
+      color: var(--white);
+      background: var(--primaryColor);
+    }
+
+    .btn-arrow-all-black svg path {
+      fill: var(--white);
+    }
+
+    .btn-arrow-all-black:hover {
+      color: var(--primaryColor);
+      background: transparent;
+    }
+
+    .btn-arrow-all-black:hover svg path {
+      fill: var(--primaryColor);
+    }
+
+    /* Hero Section */
+    #hero {
+      padding-top: 193px;
+      padding-bottom: 80px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-img.png') center/cover;
+      margin-top: 60px;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-wrapper {
+      max-width: 892px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero-wrapper h1 {
+      max-width: 730px;
+      margin: 0 auto;
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-wrapper h5 {
+      margin: 15px 0 30px;
+      color: rgba(255,255,255,0.9);
+      font-size: clamp(16px, 2vw, 20px);
+    }
+
+    #hero .btn-arrow-all {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    #hero .btn-arrow-all:hover {
+      background: var(--white);
+      color: var(--primaryColor);
+    }
+
+    #hero .btn-arrow-all svg path {
+      fill: var(--white);
+    }
+
+    #hero .btn-arrow-all:hover svg path {
+      fill: var(--primaryColor);
+    }
+
+    /* Partnerships Section */
+    #partnerships {
+      background: var(--lightBgColor);
+      padding: 60px 0;
+    }
+
+    #partnerships h4 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--primaryColor);
+    }
+
+    .partnerships-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo-slideshow {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .logo-marquee {
+      display: inline-flex;
+      animation: marquee 40s linear infinite;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .logo-marquee img {
+      height: 40px;
+      width: auto;
+      opacity: 0.6;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-marquee img:hover {
+      opacity: 1;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Caption Style */
+    .caption {
+      color: var(--hoverGray);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* Features Section */
+    #features {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .features-header {
+      text-align: center;
+    }
+
+    .features-header h2 {
+      margin-bottom: 20px;
+    }
+
+    .features-header p {
+      max-width: 708px;
+      margin: 20px auto 50px;
+    }
+
+    .features-col-single {
+      margin-bottom: 60px;
+    }
+
+    .features-col-single__img {
+      margin-bottom: 30px;
+    }
+
+    .features-col-single__img img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      filter: grayscale(20%);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Fix image aspect ratios */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .features-col-single-content h5 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .explore-more-btn {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    /* Financial Solutions (Features Grid) */
+    #financial_solutions {
+      padding: 100px 0;
+      background: var(--lightBgColor);
+    }
+
+    .financial-solutions-header {
+      text-align: center;
+    }
+
+    .financial-desc {
+      max-width: 530px;
+      margin: 20px auto 50px;
+    }
+
+    .financial-slider-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .financial-solution-single {
+      padding: 30px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--hoverGray);
+      background-size: cover !important;
+      background-position: center !important;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .integration-card {
+      padding: 40px 30px;
+      background: var(--white);
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .integration-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      border-color: var(--primaryColor);
+    }
+
+    .integration-card img {
+      height: 100px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .integration-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .integration-card h6 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--primaryColor);
+    }
+
+    .integration-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--textColor);
+      margin: 0;
+    }
+
+    .financial-solution-single:hover {
+      transform: translateY(-5px);
+    }
+
+    .financial-solution-single h6 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .financial-solution-single p {
+      margin-top: auto;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+
+    .financial-solution-single h3 {
+      color: var(--white);
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    /* How It Works Section */
+    #how_it_works_section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .how-it-works-text h2 {
+      margin-bottom: 20px;
+    }
+
+    .how-it-works-text > p {
+      max-width: 613px;
+      margin-bottom: 40px;
+    }
+
+    .how-it-works-img {
+      text-align: center;
+    }
+
+    .how-it-works-img img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      filter: grayscale(20%);
+    }
+
+    /* Accordion Styles */
+    .accordion {
+      margin-top: 40px;
+    }
+
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid var(--borderColor);
+      padding: 15px 0;
+      border-radius: 0;
+    }
+
+    .accordion-button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      outline: none;
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-button h5 {
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+
+    .accordion-button::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--primaryColor);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      content: '−';
+    }
+
+    .accordion-collapse {
+      display: none;
+    }
+
+    .accordion-collapse.show {
+      display: block;
+    }
+
+    .accordion-body {
+      padding: 10px 0 20px;
+      color: var(--textColor);
+      line-height: 1.6;
+    }
+
+    /* Pricing Section */
+    #pricing {
+      padding: 80px 0;
+      background: var(--lightBgColor);
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .pricing-table {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    }
+
+    .pricing-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 20px;
+      text-align: center;
+      border-right: 1px solid var(--borderColor);
+    }
+
+    .pricing-table th:last-child,
+    .pricing-table td:last-child {
+      border-right: none;
+    }
+
+    .pricing-table thead {
+      background: var(--white);
+      border-bottom: 2px solid var(--borderColor);
+    }
+
+    .pricing-table thead th {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--primaryColor);
+      padding: 25px 20px;
+    }
+
+    .pricing-table thead th small {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--textColor);
+      margin-top: 8px;
+    }
+
+    .pricing-table tbody tr {
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .pricing-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-table tbody td {
+      font-size: 14px;
+      color: var(--textColor);
+      padding: 15px 20px;
+    }
+
+    .pricing-table tbody td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--primaryColor);
+    }
+
+    .pricing-table .check {
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .pricing-table .dash {
+      color: #ccc;
+      font-size: 18px;
+    }
+
+    .pricing-table tfoot td {
+      padding: 25px 20px;
+      background: var(--lightBgColor);
+    }
+
+    .pricing-button {
+      display: inline-block;
+    }
+
+    .enterprise-section {
+      margin-top: 60px;
+      padding: 50px;
+      background: var(--primaryColor);
+      color: var(--white);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .enterprise-section h3 {
+      color: var(--white);
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    .enterprise-section p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .enterprise-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+      text-align: left;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .enterprise-features li {
+      color: rgba(255,255,255,0.9);
+      padding-left: 25px;
+      position: relative;
+      list-style: none;
+    }
+
+    .enterprise-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    /* About Section */
+    #about_us,
+    #about {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .about-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      filter: grayscale(20%);
+      border-radius: 8px;
+    }
+
+    .about-text {
+      padding-top: 45px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .about-text a {
+      margin-top: 30px;
+      display: inline-block;
+    }
+
+    /* Testimonials Section */
+    #testimonials {
+      padding: 100px 0;
+      background: var(--lightBgColor);
+      overflow: hidden;
+    }
+
+    .testimonials-header {
+      margin-bottom: 60px;
+    }
+
+    .testimonials-wrapper {
+      position: relative;
+      padding: 0 50px;
+    }
+
+    .testimonials-slider {
+      position: relative;
+    }
+
+    .testimonials-slider__single {
+      padding: 20px;
+    }
+
+    .testimonials-slider__single .row {
+      max-width: 980px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .testimonials-img {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .testimonials-img img {
+      width: 100%;
+      max-width: 350px;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .testimonials-info {
+      padding: 40px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .testimonials-info p {
+      color: var(--textColor);
+      line-height: 1.6;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+    }
+
+    .testimonials-info h6 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--primaryColor);
+      font-size: 1rem;
+    }
+
+    .testimonials-info .logo {
+      height: 25px;
+      width: auto;
+      object-fit: contain;
+      margin-top: 0px;
+    }
+
+    .testimonials-arrows {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-top: -40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .customPrevBtn,
+    .customNextBtn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--borderColor);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .customPrevBtn:hover,
+    .customNextBtn:hover {
+      background: var(--primaryColor);
+      border-color: var(--primaryColor);
+    }
+
+    .customPrevBtn:hover svg path,
+    .customNextBtn:hover svg path {
+      stroke: var(--white);
+    }
+
+    /* FAQ Section */
+    #faq {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    #faq .container {
+      max-width: 848px;
+    }
+
+    #faq h2 {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primaryColor);
+      color: var(--white);
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .footer-section a {
+      color: rgba(255,255,255,0.7);
+      display: block;
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* CTA Section */
+    #cta {
+      background: var(--primaryColor);
+      color: var(--white);
+      padding: 80px 0;
+    }
+
+    #cta h2 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    #cta p {
+      color: rgba(255,255,255,0.9);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Mobile Navigation */
+    .main-nav__hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .main-nav__hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--primaryColor);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 998;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 0;
+      color: var(--primaryColor);
+      border-bottom: 1px solid var(--borderColor);
+    }
+
+    /* Utilities */
+    .text-center { text-align: center; }
+    .text-md-start { text-align: left; }
+    .center-align-mobile { text-align: center; }
+    .mt-4 { margin-top: 3rem; }
+    .mb-4 { margin-bottom: 3rem; }
+    .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+    .col-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+    .col-md-6 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+    .align-items-center { align-items: center; }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+      .center-align-mobile { text-align: left; }
+      .text-md-start { text-align: left; }
+    }
+
+    @media (max-width: 991px) {
+      .main-nav__items--menu {
+        display: none;
+      }
+
+      .main-nav__hamburger {
+        display: flex;
+      }
+
+      .pricing-table {
+        overflow-x: auto;
+      }
+
+      .pricing-table table {
+        min-width: 700px;
+      }
+
+      .financial-slider-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { font-size: 36px; }
+      h2 { font-size: 30px; }
+      h3 { font-size: 24px; }
+
+      #hero {
+        padding-top: 120px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-nav__items--login {
+        display: none;
+      }
+
+      .pricing-wrapper-child {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fl-page">
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="main-nav__logo">
+            <a href="#hero">
+              <img src="images/logo.svg" alt="BoreDM" />
+            </a>
+          </div>
+          <div class="main-nav__items">
+            <div class="main-nav__items--menu">
+              <a href="#hero">Home</a>
+              <a href="#features">Features</a>
+              <a href="#integrations">Integrations</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#about">Team</a>
+              <a href="#testimonials">Testimonials</a>
+              <a href="#faq">FAQ</a>
+            </div>
+            <div class="main-nav__items--login">
+              <a class="btn-arrow-all" href="/login">Sign in</a>
+              <a class="btn-arrow-all btn-arrow-all-black" href="#cta">Get started</a>
+            </div>
+          </div>
+          <div class="main-nav__hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="toggleMobileMenu()">Home</a>
+        <a href="#features" onclick="toggleMobileMenu()">Features</a>
+        <a href="#integrations" onclick="toggleMobileMenu()">Integrations</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="#about" onclick="toggleMobileMenu()">About</a>
+        <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="/login" onclick="toggleMobileMenu()">Sign in</a>
+        <a href="#cta" onclick="toggleMobileMenu()">Get started</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="container">
+          <div class="hero-wrapper">
+            <h1>The modern standard for subsurface data</h1>
+            <h5>Intuitive, powerful software for borehole logging, lab testing, CPT data, and PDF digitization.</h5>
+            <a href="#cta" class="btn-arrow-all">
+              Get Started
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="#fff" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partnerships -->
+      <section id="partnerships">
+        <div class="container">
+          <h4>Global leaders and governments trust BoreDM</h4>
+          <div class="partnerships-wrapper">
+            <div class="logo-slideshow">
+              <div class="logo-marquee">
+                <img src="images/partnership-1-geoeng.svg" alt="Partner" />
+                <img src="images/partnership-7-wydot.svg" alt="Partner" />
+                <img src="images/partnership-2-sw.svg" alt="Partner" />
+                <img src="images/partnership-8-cdot.svg" alt="Partner" />
+                <img src="images/partnership-3-ues.svg" alt="Partner" />
+                <img src="images/partnership-9-idot.svg" alt="Partner" />
+                <img src="images/partnership-4-barr.svg" alt="Partner" />
+                <img src="images/partnership-10-wisdot.svg" alt="Partner" />
+                <img src="images/partnership-5-gza.svg" alt="Partner" />
+                <img src="images/partnership-11-kdot.svg" alt="Partner" />
+                <img src="images/partnership-6-trc.svg" alt="Partner" />
+                <img src="images/partnership-13-odot.svg" alt="Partner" />
+                <img src="images/partnership-14-scdot.svg" alt="Partner" />
+                <img src="images/partnership-12.svg" alt="Partner" />
+                <img src="images/partnership-1-geoeng.svg" alt="Partner" />
+                <img src="images/partnership-7-wydot.svg" alt="Partner" />
+                <img src="images/partnership-2-sw.svg" alt="Partner" />
+                <img src="images/partnership-8-cdot.svg" alt="Partner" />
+                <img src="images/partnership-3-ues.svg" alt="Partner" />
+                <img src="images/partnership-9-idot.svg" alt="Partner" />
+                <img src="images/partnership-4-barr.svg" alt="Partner" />
+                <img src="images/partnership-10-wisdot.svg" alt="Partner" />
+                <img src="images/partnership-5-gza.svg" alt="Partner" />
+                <img src="images/partnership-11-kdot.svg" alt="Partner" />
+                <img src="images/partnership-6-trc.svg" alt="Partner" />
+                <img src="images/partnership-13-odot.svg" alt="Partner" />
+                <img src="images/partnership-14-scdot.svg" alt="Partner" />
+                <img src="images/partnership-12.svg" alt="Partner" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features">
+        <div class="container">
+          <div class="features-header">
+            <div class="caption">Meet BoreDM</div>
+            <h2>The new subsurface standard</h2>
+            <p>BoreDM's intuitive tools bring efficiency and joy to borehole logging.<br />You handle the dirt, we handle the data.</p>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="features-col-single">
+                <div class="features-col-single__img">
+                  <img src="images/interactive-gis.png" alt="Interactive GIS" />
+                </div>
+                <div class="features-col-single-content">
+                  <h5>Interactive site maps</h5>
+                  <p>Visualize boreholes, test pits, CPTs, and more on dynamic basemaps. Explore sites from multiple perspectives, and integrate with GIS platforms for advanced spatial analysis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="features-col-single">
+                <div class="features-col-single__img">
+                  <img src="images/customizable-boring-logs.png" alt="Customizable Logs" />
+                </div>
+                <div class="features-col-single-content">
+                  <h5>Customizable boring logs</h5>
+                  <p>Highlight the most critical information with fully-customizable logs. Control editing permissions for your library's templates to finally ensure organization-wide consistency.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12 col-md-6">
+              <div class="features-col-single">
+                <div class="features-col-single__img">
+                  <img src="images/featmobile.png" alt="Mobile Collection" />
+                </div>
+                <div class="features-col-single-content">
+                  <h5>Mobile field collection</h5>
+                  <p>Use our industry-leading mobile app to log soil and rock samples in real time on your smart device, even without a signal. Once you're back online, the entries sync seamlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="features-col-single">
+                <div class="features-col-single__img">
+                  <img src="images/astm-laboratory.png" alt="Lab Integration" />
+                </div>
+                <div class="features-col-single-content">
+                  <h5>Embedded lab integration</h5>
+                  <p>Assign laboratory testing for your project's samples, then run the tests directly within the BoreDM platform. Track equipment and capacity, generate professional reports.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="explore-more-btn">
+            <a href="#integrations" class="btn-arrow-all">
+              Explore BoreDM
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Financial Solutions -->
+      <section id="financial_solutions">
+        <div class="container">
+          <div class="financial-solutions-header text-center">
+            <div class="caption">Features</div>
+            <h2>One platform, every subsurface workflow</h2>
+            <p class="financial-desc">From growing teams to global companies, BoreDM streamlines subsurface operations at any scale.</p>
+          </div>
+          <div class="financial-slider-wrapper">
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/government.png)">
+              <h6>Trusted by government</h6>
+              <p>State agencies nationwide utilize BoreDM for complex subsurface operations.</p>
+              <h3>20+ DOTs on board</h3>
+            </div>
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/fieldtolab.png)">
+              <h6>Integrated lab workflows</h6>
+              <p>Run ASTM-compliant lab tests in BoreDM and autofill results back to your logs.</p>
+              <h3>Effortless import</h3>
+            </div>
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/fasterreports.png)">
+              <h6>Custom borehole logs</h6>
+              <p>Build custom templates in minutes and control editing permissions across your teams.</p>
+              <h3>Exceptional reports</h3>
+            </div>
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/loganywhere.png)">
+              <h6>Digital field logging</h6>
+              <p>Log borings on your smart device, even while offline. BoreDM syncs when you reconnect.</p>
+              <h3>Log anywhere</h3>
+            </div>
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/legacydata.png)">
+              <h6>Upload legacy data</h6>
+              <p>Digitize thousands of paper logs or PDFs in mere hours with our proprietary AI.</p>
+              <h3>AI scanning</h3>
+            </div>
+            <div class="financial-solution-single" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/enterprisesecurity.png)">
+              <h6>Enterprise-grade security</h6>
+              <p>BoreDM keeps your data safe with role-based access, AES-256 encryption, and SOC 2 controls.</p>
+              <h3>Protected data</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrations Section -->
+      <section id="integrations">
+        <div class="container">
+          <div class="features-header text-center">
+            <div class="caption">Plug and play</div>
+            <h2>Seamless integration across systems</h2>
+            <p>Connect field instruments, lab results, GIS, and CAD in one streamlined system.</p>
+          </div>
+          <div class="financial-slider-wrapper">
+            <div class="integration-card">
+              <img src="images/civil3d.png" alt="Civil 3D" />
+              <h6>AutoCAD Civil 3D</h6>
+              <p>Instantly push logs and cross-sections into Civil 3D via our secure plugin.</p>
+            </div>
+            <div class="integration-card">
+              <img src="images/restapi.png" alt="REST API" />
+              <h6>REST API</h6>
+              <p>Secure endpoints to automate reports or feed BoreDM data into any tool.</p>
+            </div>
+            <div class="integration-card">
+              <img src="images/arcgis.png" alt="ArcGIS" />
+              <h6>Esri ArcGIS</h6>
+              <p>Overlay borehole data in ArcGIS for advanced spatial analysis and comprehensive mapping.</p>
+            </div>
+            <div class="integration-card">
+              <img src="images/intlogoagsgint.png" alt="Data Formats" />
+              <h6>GINT / DIGGS / CSV / AGS</h6>
+              <p>Import and export gINT, DIGGS, CSV, and AGS (including AGS 4.1.1 AU) files.</p>
+            </div>
+            <div class="integration-card">
+              <img src="images/viktor.png" alt="VIKTOR" />
+              <h6>VIKTOR</h6>
+              <p>Build custom VIKTOR apps and dashboards directly on BoreDM data.</p>
+            </div>
+            <div class="integration-card">
+              <img src="images/leapfroggy.png" alt="Leapfrog" />
+              <h6>Leapfrog</h6>
+              <p>Export directly to Leapfrog Geo for rapid 3D geological modeling.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how_it_works_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-text">
+                <div class="caption center-align-mobile">Get started</div>
+                <h2 class="center-align-mobile">Your BoreDM launch plan</h2>
+                <p>We believe that paid support and onboarding incentivizes poor design. That's why BoreDM always offers complementary support and onboarding with industry-leading response times.</p>
+                <div class="accordion" id="accordionHowItWorks">
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorksOne">
+                      <h5>Step 1: Pre-Launch Setup</h5>
+                    </button>
+                    <div id="collapseWorksOne" class="accordion-collapse collapse" data-bs-parent="#accordionHowItWorks">
+                      <div class="accordion-body">
+                        Start your launch by hopping on a call with BoreDM's team to create your environment, design templates, configure integrations, and more.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorksTwo">
+                      <h5>Step 2: Training</h5>
+                    </button>
+                    <div id="collapseWorksTwo" class="accordion-collapse collapse" data-bs-parent="#accordionHowItWorks">
+                      <div class="accordion-body">
+                        After configuring your ideal BoreDM environment, our deployment specialists will onboard your staff. BoreDM's intuitive design enables most users to understand the platform after just a few minutes of use, but stellar customer assistance is central to our mission.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorksThree">
+                      <h5>Step 3: Full Adoption & Optimization</h5>
+                    </button>
+                    <div id="collapseWorksThree" class="accordion-collapse collapse" data-bs-parent="#accordionHowItWorks">
+                      <div class="accordion-body">
+                        Once you're ready to rock, launch BoreDM organization-wide in minutes. We'll stay with you through every test and borehole, offering additional training, support, and customization at no additional cost.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="how-it-works-img">
+                <img src="images/launchplan.png" alt="Launch Plan" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing">
+        <div class="container">
+          <div class="pricing-header">
+            <div class="caption">Pricing</div>
+            <h2>Choose the plan that best fits your needs</h2>
+          </div>
+          <div class="pricing-table">
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left; padding-left: 30px;">Features</th>
+                  <th>Logs<small>For high-quality logs and cross sections</small></th>
+                  <th>Labs<small>For lab testing and data management</small></th>
+                  <th>Labs+<small>For comprehensive testing and queries</small></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Custom log templates and data entry</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>PDF and DXF cross sections</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Interactive maps of borings</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>iOS/Android field collection app</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Role-based team permissions</td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Lab data entry and auto-filling</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Digital test assignment sheets</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Equipment calibration reminders</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Audit trails for lab samples</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>20+ advanced ASTM tests</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Custom database querying</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Multi-project team management</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Advanced synthesis module</td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="dash">—</span></td>
+                  <td><span class="check">✓</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td><a href="#cta" class="pricing-button btn-arrow-all btn-arrow-all-black">Start Free Trial</a></td>
+                  <td><a href="#cta" class="pricing-button btn-arrow-all btn-arrow-all-black">Start Free Trial</a></td>
+                  <td><a href="#cta" class="pricing-button btn-arrow-all btn-arrow-all-black">Start Free Trial</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- Enterprise Section -->
+          <div class="enterprise-section">
+            <h3>Enterprise</h3>
+            <p>For users who just can't get enough of BoreDM, we're here to go the extra mile.</p>
+            <ul class="enterprise-features">
+              <li>Dedicated Account Manager</li>
+              <li>Single Sign-On (SAML/SSO)</li>
+              <li>Curated Onboarding & Training</li>
+              <li>Custom Invoicing & Billing</li>
+              <li>API Access & Custom Integrations</li>
+              <li>Site Visits & Hands-On Help</li>
+            </ul>
+            <a href="#cta" class="btn-arrow-all" style="border-color: var(--white); color: var(--white);">
+              Contact Sales
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="#fff" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section - Our Team and Mission -->
+      <section id="about">
+        <div class="container">
+          <div class="about-header">
+            <div class="caption">Breakthroughs</div>
+            <h2>Built by software engineers, for geotechs</h2>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="about-img">
+                <img src="images/samkaganbaby.png" alt="Team" style="width:100%; height:auto; border-radius:8px;" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="about-text">
+                <p>We know the pain of software tools built by civil engineers. BoreDM's founder, Louis, is a software developer who encountered gINT while working in operations for a tunneling company. Though he was frustrated and surprised by the outdated user interface of gINT, he was even more struck by the product's lack of built-in data management capabilities.</p>
+                <p>Subsequently, Louis consulted extensively with engineers across the globe to build BoreDM, short for Boring Data Management. With a team of experienced software developers, data experts, and geoprofessionals from around the world, Louis built a product which drives efficiency and reduces risk, while helping engineers build high-quality subsurface data assets.</p>
+                <p>BoreDM is designed for the realities of subsurface work — logging in the field, running lab tests, generating cross-sections, and producing clean reports. Our product replaces slow, fragmented tools with a single platform that's remarkably intuitive and grounded in tried and true industry standards.</p>
+                <a href="#cta" class="btn-arrow-all">
+                  Join the mission
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials">
+        <div class="container">
+          <div class="testimonials-header">
+            <div class="caption">Success</div>
+            <h2>Why teams choose BoreDM</h2>
+            <div class="row align-items-center">
+              <div class="col-12 col-md-6">
+                <p>
+                  Learn how BoreDM improves efficiency, eliminates reporting errors,<br />
+                  and streamlines subsurface workflows.
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="testimonials-arrows">
+                  <a href="javascript:void(0);" class="customPrevBtn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 1.69727L4.6967 8.00057L11 14.3039" stroke="black" stroke-width="1.18856"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0);" class="customNextBtn">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 13.3027L7.3033 6.99943L1 0.696133" stroke="black" stroke-width="1.18856"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials-wrapper">
+          <div class="testimonials-slider owl-carousel owl-theme">
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/brysonbeard.jpeg" alt="Bryson Beard" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      The BoreDM team is incredibly responsive—they listen,
+                      act on feedback, and continue to deliver improvements
+                      that make our work easier.
+                    </p>
+                    <h6>Bryson Beard</h6>
+                    <img src="images/gulf_south_engineering_and_testing_cover.png" alt="Gulf South logo" class="logo"
+                      style="height:25px; width:auto; object-fit:contain; margin-top:0px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/nick.JPG" alt="person" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      Going from gINT to BoreDM is like going from a moped to a muscle car.
+                    </p>
+                    <h6>Nick Lacour</h6>
+                    <img src="images/certerra.png" alt="Certerra logo" class="logo"
+                      style="height:25px; width:auto; object-fit:contain; margin-top:0px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/lukevannevel.png" alt="person" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      Tasks that previously took several hours per project can now be completed in less than half the
+                      time, which has materially improved our turnaround on deliverables.
+                    </p>
+                    <h6>Luke Van Nevel</h6>
+                    <img src="images/cornerstone.png" alt="Cornerstone logo" class="logo"
+                      style="height:20px; width:auto; object-fit:contain; margin-top:5px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/jimmyreal.png" alt="person" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      With gINT, large projects almost always meant weeks before logs could be completed, but with BoreDM
+                      our EITs were able to knock out the borings in a couple of days.
+                    </p>
+                    <h6>James Werbiski</h6>
+                    <img src="images/ettl.png" alt="ETTL logo" class="logo"
+                      style="height:25px; width:auto; object-fit:contain; margin-top:0px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/moniqueanderson.jpeg" alt="person" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      The BoreDM team's focus on listening to our needs
+                      and then developing the product to meet those needs
+                      is unique in our industry.
+                    </p>
+                    <h6>Monique Anderson</h6>
+                    <img src="images/shannonwilson.png" alt="Shannon and Wilson logo" class="logo"
+                      style="height:17px; width:auto; object-fit:contain; margin-top:8px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-slider__single">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-img">
+                    <img src="images/klftodd.png" alt="person" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="testimonials-info"
+                    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start;">
+                    <p>
+                      BoreDM allows us to use a fully integrated, one-stop shop, to produce multiple deliverables from one application.
+                    </p>
+                    <h6>Todd McKenney</h6>
+                    <img src="images/kleinfelder-inc-logo.png" alt="Kleinfelder logo" class="logo"
+                      style="height:25px; width:auto; object-fit:contain; margin-top:0px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq">
+        <div class="container">
+          <div class="caption">Learn more</div>
+          <h2>Frequently asked questions</h2>
+          <div class="accordion" id="accordionFAQ">
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                <h5>Why do industry leaders choose BoreDM for subsurface workflows?</h5>
+              </button>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  BoreDM was built to revolutionize the way subsurface data is collected, stored, and analyzed. Our software provides the first modern interface for field logging, lab testing, and cross-section generation. By standardizing your data and automating entry, BoreDM cuts manual work by up to 75% compared to legacy tools.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                <h5>How does the free trial work and what features are included?</h5>
+              </button>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  Click the auger in the bottom right corner to chat with Auggie, our friendly AI support bot, and initiate a two-week free trial. You'll receive login credentials immediately and gain full access to our customer support team, step-by-step onboarding guides, and advanced tutorials. As a trial user, you'll receive the full BoreDM experience, enjoying access to every feature in your chosen tier.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                <h5>How does BoreDM secure my data?</h5>
+              </button>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  At BoreDM, we take data seriously — and that includes protecting it. Our team runs state-of-the-art security systems, and proves it by undergoing annual independent audits to validate our controls against SOC 2 Type II and AZRAMP standards. Your borings are your business, so we utilize AES-256 encryption at rest, TLS 1.2+ in transit, and isolated AWS VPCs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                <h5>Does BoreDM work offline?</h5>
+              </button>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  You bet your boulders it does. The BoreDM Field app stores entries locally, so you can log and take notes offline. Once you're back online, the field records automatically sync up with our desktop platform.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                <h5>What support and onboarding resources does BoreDM provide?</h5>
+              </button>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  At BoreDM, we are obsessed with providing an exceptional customer experience for exceptional subsurface professionals. Every new customer is entitled to free assistance from our team of deployment specialists. You'll also receive free customer service for the lifetime of your BoreDM subscription. Our U.S.-based service team respond in an average of just two minutes during business hours.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                <h5>Which file formats can I import/export? Can I bring in existing data?</h5>
+              </button>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  BoreDM fits seamlessly into your existing workflows. We support imports from gINT, Excel, KML/KMZ, DIGGS, and AGS files, with additional formats available upon request. Or, if it's easier, just use our proprietary AI to digitize paper and PDF logs instantly. When you're ready to share your amazing subsurface work, we support exports to AGS, DIGGS, Leapfrog, ESRI Shapefile, KML/KMZ, Civil 3D, Excel, CSV, with additional formats available upon request.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta">
+        <div class="container text-center">
+          <h2>Ready to transform your subsurface workflows?</h2>
+          <p>Join thousands of professionals who've modernized their operations with BoreDM.</p>
+          <div class="cta-buttons">
+            <a href="/login" class="btn-arrow-all" style="border-color: var(--white); color: var(--white);">
+              Sign In
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="#fff" />
+              </svg>
+            </a>
+            <a href="mailto:support@boredm.com" class="btn-arrow-all" style="background: var(--white); color: var(--primaryColor);">
+              Contact Sales
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6.31579C13 6.16652 12.9413 6.02337 12.8368 5.91782L7.63682 0.664846C7.41924 0.445051 7.06647 0.445051 6.8489 0.664846C6.63132 0.884639 6.63132 1.241 6.8489 1.46079L11.0978 5.75297H0.5571C0.2494 5.75297 0 6.00495 0 6.31579C0 6.62663 0.2494 6.87861 0.5571 6.87861H11.0978L6.8489 11.1708C6.63132 11.3906 6.63132 11.7469 6.8489 11.9667C7.06647 12.1865 7.41924 12.1865 7.63682 11.9667L12.8368 6.71376C12.9413 6.60821 13 6.46506 13 6.31579Z" fill="#000" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#integrations">Integrations</a>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <a href="#about">Team</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#cta">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#">Documentation</a>
+            <a href="#">Support</a>
+          </div>
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 BoreDM. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+
+    // Update active navigation item on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.main-nav__items--menu a');
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Initialize Testimonials Carousel
+    $(document).ready(function() {
+      const owl = $(".testimonials-slider").owlCarousel({
+        loop: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        autoplaySpeed: 2500,
+        responsive: {
+          0: {
+            items: 1,
+            margin: 20,
+            stagePadding: 0,
+          },
+          767: {
+            items: 1,
+            margin: 30,
+            stagePadding: 0,
+          },
+          1025: {
+            items: 2,
+            margin: 20,
+            stagePadding: 0,
+          },
+          1250: {
+            items: 1,
+            margin: 30,
+            stagePadding: 400,
+          },
+        },
+      });
+
+      // Custom navigation buttons
+      $(document).on("click", ".customPrevBtn", function (e) {
+        e.preventDefault();
+        owl.trigger("prev.owl.carousel", [1000]);
+      });
+
+      $(document).on("click", ".customNextBtn", function (e) {
+        e.preventDefault();
+        owl.trigger("next.owl.carousel", [1000]);
+      });
+    });
+  </script>
+</body>
+</html>
